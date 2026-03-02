@@ -270,10 +270,10 @@ const FOOTER_HTML = `
           Dr. K.V. Subba Reddy Institute of Technology (KVSRIT) is established in 2007 with a mission to produce high-quality engineering professionals.
         </p>
         <div class="flex space-x-4">
-          <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
-          <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
-          <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-800 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="coming-soon.html" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="coming-soon.html" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          <a href="coming-soon.html" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+          <a href="coming-soon.html" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-800 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
         </div>
       </div>
 
@@ -325,9 +325,9 @@ const FOOTER_HTML = `
     <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-gray-500">© ${new Date().getFullYear()} Dr. K.V. Subba Reddy Institute of Technology. All rights reserved.</p>
       <div class="flex gap-6 text-[10px] uppercase font-bold tracking-widest text-gray-600">
-        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
-        <a href="#" class="hover:text-white transition-colors">Sitemap</a>
+        <a href="coming-soon.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="coming-soon.html" class="hover:text-white transition-colors">Terms of Use</a>
+        <a href="coming-soon.html" class="hover:text-white transition-colors">Sitemap</a>
       </div>
     </div>
   </div>
@@ -378,6 +378,94 @@ document.addEventListener('DOMContentLoaded', () => {
     })()
   );
 
+  // ── PERFORMANCE: Consolidate Google Fonts loading ────────────────────
+  // Multiple pages include duplicate <link> tags for Google Fonts.
+  // We consolidate them into a single non-render-blocking request.
+  (function optimizeGoogleFonts() {
+    if (document.head.dataset.fontsOptimized) return;
+
+    // Collect all unique font families requested
+    const fontFamilies = new Set();
+    const fontLinks = document.querySelectorAll('link[href*="fonts.googleapis.com"]');
+    fontLinks.forEach(link => {
+      const href = link.getAttribute('href') || '';
+      // Extract family param: family=Inter:wght@300;400...
+      const match = href.match(/family=([^&]+)/g);
+      if (match) match.forEach(f => fontFamilies.add(f.replace('family=', '')));
+      link.remove(); // Remove the individual link
+    });
+
+    if (fontFamilies.size > 0) {
+      // Add preconnect hints (speeds up DNS + TLS handshake)
+      const preconnect1 = document.createElement('link');
+      preconnect1.rel = 'preconnect';
+      preconnect1.href = 'https://fonts.googleapis.com';
+      document.head.insertBefore(preconnect1, document.head.firstChild);
+
+      const preconnect2 = document.createElement('link');
+      preconnect2.rel = 'preconnect';
+      preconnect2.href = 'https://fonts.gstatic.com';
+      preconnect2.crossOrigin = 'anonymous';
+      document.head.insertBefore(preconnect2, preconnect1.nextSibling);
+
+      // Build single combined URL
+      const families = Array.from(fontFamilies).map(f => 'family=' + f).join('&');
+      const combinedUrl = 'https://fonts.googleapis.com/css2?' + families + '&display=swap';
+
+      const linkEl = document.createElement('link');
+      linkEl.rel = 'stylesheet';
+      linkEl.href = combinedUrl;
+      // Use media="print" trick for non-render-blocking, then swap on load
+      linkEl.media = 'print';
+      linkEl.onload = function () { this.media = 'all'; };
+      document.head.appendChild(linkEl);
+
+      // Fallback: if onload doesn't fire, force after 3s
+      setTimeout(() => { linkEl.media = 'all'; }, 3000);
+    }
+
+    document.head.dataset.fontsOptimized = 'true';
+  })();
+
+  // ── AUTO-INJECT responsive.css on EVERY page ──────────────────────────
+  // Many pages have WRONG paths for responsive.css (e.g. ../../../css/responsive.css)
+  // which silently 404. We remove any broken links and inject the correct one.
+  (function injectResponsiveCSS() {
+    if (document.head.dataset.responsiveInjected) return; // prevent double-inject
+    // Remove any existing responsive.css links (they may have wrong paths)
+    document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+      if (link.getAttribute('href') && link.getAttribute('href').includes('responsive.css')) {
+        link.remove();
+      }
+    });
+    const linkEl = document.createElement('link');
+    linkEl.rel = 'stylesheet';
+    linkEl.href = rootPath + 'css/responsive.css';
+    document.head.appendChild(linkEl);
+    document.head.dataset.responsiveInjected = 'true';
+  })();
+
+  // ── AUTO-INJECT navbar-enhanced.css on EVERY page ─────────────────────
+  (function injectNavbarCSS() {
+    if (document.head.dataset.navbarCssInjected) return;
+    const alreadyLoaded = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+      .some(link => {
+        const href = link.getAttribute('href') || '';
+        // Only consider it loaded if the path looks correct (starts with rootPath)
+        return href === rootPath + 'css/navbar-enhanced.css' ||
+          href === 'css/navbar-enhanced.css' ||
+          href === '../css/navbar-enhanced.css' ||
+          href === '../../css/navbar-enhanced.css';
+      });
+    if (!alreadyLoaded) {
+      const linkEl = document.createElement('link');
+      linkEl.rel = 'stylesheet';
+      linkEl.href = rootPath + 'css/navbar-enhanced.css';
+      document.head.appendChild(linkEl);
+    }
+    document.head.dataset.navbarCssInjected = 'true';
+  })();
+
   const navPlaceholder = document.getElementById('navbar-placeholder');
   const footerPlaceholder = document.getElementById('footer-placeholder');
 
@@ -396,11 +484,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initSearchOverlay();
     initDropdownA11y();
 
-    // Ensure consistent navbar height
+    // Ensure consistent navbar height (only the inner bar, NOT the whole nav)
+    // NOTE: Do NOT set maxHeight on #main-nav or it will clip the mobile menu dropdown
     const mainNav = document.getElementById('main-nav');
     if (mainNav) {
       mainNav.style.minHeight = '80px';
-      mainNav.style.maxHeight = '80px';
+      // maxHeight removed — it was clipping the mobile dropdown menu
     }
   }
 

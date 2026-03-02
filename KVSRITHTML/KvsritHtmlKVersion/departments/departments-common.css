@@ -674,10 +674,51 @@
 
     .dept-section {
         padding: 1.5rem;
+        overflow: visible;
     }
 
     .dept-main-content {
         gap: 2rem;
+    }
+
+    /* ── TEXT WRAPPING FIX ─────────────────────────
+       Prevent text from being clipped inside card boxes.
+       Every text container must allow word-breaking. */
+    .dept-section,
+    .dept-section *,
+    .dept-sidebar-card,
+    .dept-sidebar-card * {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        min-width: 0;
+    }
+
+    .dept-vision-box,
+    .dept-mission-text,
+    .dept-hod-message,
+    .dept-research-description,
+    .dept-hero-description,
+    .dept-curriculum-semester,
+    .dept-resource-title {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    /* Ensure hero text doesn't impose a max-width that clips */
+    .dept-hero-text {
+        max-width: 100%;
+    }
+
+    /* Ensure mission items flex without overflow */
+    .dept-mission-item {
+        max-width: 100%;
+    }
+
+    .dept-mission-text {
+        flex: 1;
+        min-width: 0;
     }
 }
 

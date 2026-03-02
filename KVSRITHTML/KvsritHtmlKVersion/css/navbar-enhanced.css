@@ -6,7 +6,7 @@
 
 /* 1. TYPOGRAPHY & VARIABLES
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Google Fonts loaded via <link> in HTML files — no @import needed here */
 
 :root {
     /* Font Families */
@@ -125,10 +125,14 @@
     font-family: var(--font-primary);
     background: var(--background);
     transition: box-shadow var(--transition-medium), background-color var(--transition-medium);
-    height: var(--navbar-height);
     min-height: 80px;
     display: flex;
+    flex-wrap: wrap;
+    /* CRITICAL: allows #mobile-menu to drop below #nav-inner */
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 
 /* Scroll State (Applied via JS) */
@@ -144,6 +148,8 @@
     display: flex;
     align-items: center;
     width: 100%;
+    flex-basis: 100%;
+    /* Force full width so #mobile-menu wraps below */
 }
 
 /* Logo Alignment */
@@ -362,28 +368,36 @@
     color: var(--secondary);
 }
 
-/* Mobile Menu Container - Animated Slide */
+/* Mobile Menu Container */
 #mobile-menu {
     border-top: 1px solid var(--border);
     background: var(--white);
-    /* Styles for animation */
     transition: max-height 250ms ease-in-out, opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
+    /* Important: width must be 100%, overflow-y auto for scrolling */
+    width: 100% !important;
+    flex-basis: 100% !important;
+    /* Force to second row in flex-wrap */
+    box-sizing: border-box;
+}
+
+/* Mobile Menu inner flex column */
+#mobile-menu>div {
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 /* Mobile Links */
 #mobile-menu a {
     display: block;
-    padding: 12px 16px;
-    /* 16px horiz, 12px vert */
+    padding: 14px 16px;
     font-size: 15px;
     font-weight: 600;
     color: var(--text);
     border-bottom: 1px solid var(--border);
-    /* Separator lines */
-    margin-bottom: 4px;
-    /* 8px gap simulated with padding/margin */
+    margin-bottom: 0;
     border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #mobile-menu a:last-child {
@@ -391,14 +405,16 @@
 }
 
 /* Apply Now Button Mobile */
+#mobile-menu a.bg-accent,
 #mobile-menu a.bg-blue-600 {
-    background: var(--accent);
-    /* Gold */
-    color: white;
+    background: var(--accent) !important;
+    color: white !important;
     text-align: center;
-    border-radius: 8px;
-    margin-top: 16px;
+    border-radius: 12px;
+    margin-top: 12px;
     border: none;
+    padding: 14px 20px;
+    font-weight: 700;
 }
 
 /* ==========================================================================

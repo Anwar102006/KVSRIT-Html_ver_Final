@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KVSRIT | Dr. K.V. Subba Reddy Institute of Technology</title>
-
-    <!-- Converted CSS (Tailwind to pure CSS) -->
+    <title>KVSRIT – Dr.K.V.Subba Reddy Institute of Technology – Affiliated to JNTUA & Approved by AICTE, Accredited by
+        NAAC with A+ Grade</title>
     <link rel="stylesheet" href="css/core.css">
 
     <!-- Navbar Enhanced Styling -->
@@ -19,15 +18,14 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Mobile Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
     </style>
-
-    <!-- Lucide Icons -->
-
-
     <!-- News Section CSS -->
     <link rel="stylesheet" href="assets/css/news-section.css">
 
@@ -89,19 +87,21 @@
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <main>
+    <main style="position:relative;">
         <!-- News Ticker -->
         <div
-            style="background-color:var(--blue-50);padding:12px 0;overflow:hidden;border-bottom:1px solid var(--blue-100);">
+            style="position:absolute;top:0;left:0;width:100%;z-index:20;background-color:transparent;padding:12px 0;overflow:hidden;">
             <div
                 style="display:inline-flex;align-items:center;gap:12px;white-space:nowrap;animation:tickerSlide 18s linear infinite;">
                 <span
-                    style="background:var(--secondary);color:var(--white);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:9999px;">Latest
+                    style="background:var(--secondary);color:var(--white);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 12px;border-radius:9999px;box-shadow:0 2px 4px rgba(0,0,0,0.1);">Latest
                     News</span>
-                <span style="font-size:14px;font-weight:500;color:var(--primary);font-style:italic;">• Admissions Open
+                <span
+                    style="font-size:14px;font-weight:600;color:var(--white);text-shadow:0 1px 2px rgba(0,0,0,0.8);font-style:italic;">•
+                    Admissions Open
                     for
-                    2024-25 • NAAC A+ Accredited Institution • Highest Placement Package of 15 LPA • Last date for
-                    application extended to March 31st •</span>
+                    2025-26 • NAAC A+ Grade Accredited Institution (1st Cycle 2022) • NBA Accredited B.Tech Programs
+                    (ECE, EEE & CSE) • Affiliated to JNTUA & Approved by AICTE •</span>
             </div>
             <style>
                 @keyframes tickerSlide {
@@ -170,26 +170,29 @@
             </div>
 
             <!-- Hero Content Overlay -->
-            <div
-                style="position:absolute;inset:0;z-index:10;display:flex;align-items:center;max-width:80rem;margin:0 auto;padding:0 1rem;">
-                <div class="max-w-2xl text-white space-y-6">
-                    <div
-                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs font-bold uppercase tracking-widest text-blue-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="w-4 h-4">
+            <div id="heroContentOverlay"
+                style="position:absolute;inset:0;z-index:10;display:flex;align-items:center;width:100%;box-sizing:border-box;padding:0 1.25rem;">
+                <div class="hero-text-block"
+                    style="width:100%;max-width:42rem;box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word;">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs font-bold uppercase tracking-widest"
+                        style="color:var(--accent);flex-shrink:0;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="8" r="7" />
                             <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-                        </svg> Accredited by NAAC A+ Grade
+                        </svg> NAAC A+ Grade | Affiliated to JNTUA | Approved by AICTE
                     </div>
-                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                    <h1 class="hero-heading text-5xl md:text-7xl font-extrabold leading-tight"
+                        style="margin-top:1rem;word-break:break-word;">
                         Shape Your <span class="text-blue-400">Future</span> With Excellence
                     </h1>
-                    <p class="text-lg text-blue-100/80 leading-relaxed">
-                        Join KVSRIT to experience world-class engineering education with state-of-the-art infrastructure
-                        and top-tier industry placements.
+                    <p class="hero-paragraph text-lg text-blue-100/80 leading-relaxed"
+                        style="margin-top:1rem;word-wrap:break-word;overflow-wrap:break-word;">
+                        Promoted by Vaibhav Educational Society with the motto "Work is Worship". Offering Quality
+                        Education for the Betterment of Society since 2007. Affiliated to JNTUA, Ananthapuramu &
+                        Approved by AICTE, New Delhi.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <div class="hero-buttons flex flex-col sm:flex-row gap-4" style="margin-top:1.5rem;">
                         <a href="admissions.html"
                             class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:-translate-y-1 text-center">Start
                             Admission</a>
@@ -201,24 +204,24 @@
             </div>
 
             <!-- Quick Stats Floating bar -->
-            <div class="absolute bottom-0 left-0 w-full glass py-8 border-t-0 border-x-0 hidden md:block"
-                style="position:absolute;bottom:0;left:0;width:100%;z-index:10;">
+            <div class="absolute bottom-0 left-0 w-full py-8 border-t-0 border-x-0 hidden md:block"
+                style="position:absolute;bottom:0;left:0;width:100%;z-index:10;background-color:transparent;">
                 <div class="max-w-7xl mx-auto px-4 grid grid-cols-4 gap-8">
                     <div class="text-center">
-                        <div class="text-3xl font-extrabold text-white">15+</div>
+                        <div class="text-3xl font-extrabold text-white">5+</div>
+                        <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Awards</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-extrabold text-white">150+</div>
+                        <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Best Teachers</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-extrabold text-white">2000+</div>
+                        <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Students Enrolled</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-extrabold text-white">17+</div>
                         <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Years of Excellence</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-extrabold text-white">4500+</div>
-                        <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Graduated Students</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-extrabold text-white">95%</div>
-                        <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Placement Record</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-extrabold text-white">12+</div>
-                        <div class="text-xs text-blue-200 font-bold uppercase tracking-widest">Industry Labs</div>
                     </div>
                 </div>
             </div>
@@ -270,10 +273,7 @@
                             <button class="ann-tab" data-tab="placements"
                                 style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:var(--section);color:var(--text);border:1px solid var(--border);border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Placements</button>
                             <button class="ann-tab" data-tab="admissions"
-                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:var(--section);color:var(--text);border:1px solid var(--border);border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Admissions</button>
-                            <button class="ann-tab" data-tab="forums"
-                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:var(--section);color:var(--text);border:1px solid var(--border);border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Forum
-                                Activities</button>
+                                style="flex:1;padding:8px 6px;font-size:11px;font-weight:600;background:var(--section);color:var(--text);border:1px solid var(--border);border-bottom:none;cursor:pointer;border-radius:6px 6px 0 0;transition:all 0.2s;white-space:nowrap;text-align:center;">Circulars</button>
                         </div>
 
                         <!-- Tab Content Panels -->
@@ -294,97 +294,56 @@
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:var(--accent);font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:var(--primary);font-size:14px;">11-02-2026</span>
+                                                style="font-weight:700;color:var(--primary);font-size:14px;">2023-24</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Ignasa Event
-                                            Gallery <a href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">College
+                                            Admission Application Form
+                                            <a href="coming-soon.html"
                                                 style="color:var(--secondary);font-weight:600;text-decoration:none;">Click
-                                                Here</a></p>
+                                                Here</a>
+                                        </p>
                                     </div>
                                     <!-- Entry 2 -->
                                     <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">25-01-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">17-06-2023</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Admissions
-                                            Open for Academic Year 2025-2026. Apply now! <a href="admissions.html"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Fee Payment
+                                            for College Account Number
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a></p>
+                                                Here</a>
+                                        </p>
                                     </div>
                                     <!-- Entry 3 -->
                                     <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">20-01-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">07-12-2023</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">NAAC A+
-                                            Accreditation achieved with 3.30 CGPA <a href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Student
+                                            Transfer Information
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a></p>
+                                                Here</a>
+                                        </p>
                                     </div>
                                     <!-- Entry 4 -->
                                     <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">15-01-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">22-05-2020</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">IEEE Student
-                                            Chapter Organizing Workshop on "AI & Machine Learning" on 20-01-2026 <a
-                                                href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">JnanaBhumi
+                                            Scholarships Ineligible/Rejected List 2019-20
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a></p>
-                                    </div>
-                                    <!-- Entry 5 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
-                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
-                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
-                                            <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">10-01-2026</span>
-                                        </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Technical
-                                            Symposium 2026 scheduled for February 15-16 <a href="#"
-                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a></p>
-                                    </div>
-                                    <!-- Entry 6 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
-                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
-                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
-                                            <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">05-01-2026</span>
-                                        </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">CSI Student
-                                            Chapter Organizing "Tech Probe" on 10-01-2026 <a href="#"
-                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a></p>
-                                    </div>
-                                    <!-- Entry 7 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
-                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
-                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
-                                            <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">28-12-2025</span>
-                                        </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">ISTE of KVSRIT
-                                            Organizing "MetaVerse" on 05-01-2026 <a href="#"
-                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a></p>
-                                    </div>
-                                    <!-- Entry 8 -->
-                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
-                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
-                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
-                                            <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">20-12-2025</span>
-                                        </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">
-                                            Inter-departmental Sports Meet 2026, Register before Jan 31st <a href="#"
-                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a></p>
+                                                Here</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -403,10 +362,11 @@
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">10-02-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">25-03-2025</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Mid Semester
-                                            Examination Schedule Released <a href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">MCA MBA IV SEM
+                                            REGISTRATION MARCH-2025
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
                                                 Here</a>
                                         </p>
@@ -415,10 +375,102 @@
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">01-02-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">25-03-2025</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Internal
-                                            Assessment marks uploaded - Verify on Student Portal <a href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">MCA MBA IV SEM
+                                            REGISTRATION MAY-2025
+                                            <a href="coming-soon.html"
+                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
+                                                Here</a>
+                                        </p>
+                                    </div>
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
+                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
+                                            <span
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">25-03-2025</span>
+                                        </div>
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">NOTIFICATION
+                                            FOR PROJECT VIVO VOCE
+                                            <a href="coming-soon.html"
+                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
+                                                Here</a>
+                                        </p>
+                                    </div>
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
+                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
+                                            <span
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">25-03-2025</span>
+                                        </div>
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">M. TECH. III
+                                            SEM SUPPLY REGISTRATION
+                                            <a href="coming-soon.html"
+                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
+                                                Here</a>
+                                        </p>
+                                    </div>
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
+                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
+                                            <span
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">12-02-2024</span>
+                                        </div>
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">EXTERNAL
+                                            TIMETABLE FOR I MBA/MCA I SEM (R-23) EXTERNAL EXAMINATION MAR-2024
+                                            <a href="coming-soon.html"
+                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
+                                                Here</a>
+                                        </p>
+                                    </div>
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
+                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
+                                            <span
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">03-02-2024</span>
+                                        </div>
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">NOTIFICATION
+                                            FOR I MBA/MCA I SEM (R-23) EXTERNAL EXAMINATION MAR-2024
+                                            <a href="coming-soon.html"
+                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
+                                                Here</a>
+                                        </p>
+                                    </div>
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
+                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
+                                            <span
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">08-01-2024</span>
+                                        </div>
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">NOTIFICATION
+                                            FOR I B TECH I SEM (R-23) EXTERNAL EXAMINATION FEB-2024
+                                            <a href="coming-soon.html"
+                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
+                                                Here</a>
+                                        </p>
+                                    </div>
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
+                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
+                                            <span
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">22-06-2020</span>
+                                        </div>
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">MBA IV
+                                            Semester Regular & Supplementary Examinations 2020
+                                            <a href="coming-soon.html"
+                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
+                                                Here</a>
+                                        </p>
+                                    </div>
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
+                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
+                                            <span
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">18-06-2020</span>
+                                        </div>
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">B.Tech IV Year
+                                            II Semester R15 Regular & Supplementary Examinations 2020
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
                                                 Here</a>
                                         </p>
@@ -440,10 +492,11 @@
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">08-02-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">28-01-2020</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">TCS Campus
-                                            Recruitment Drive on 15-02-2026 <a href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">List of
+                                            Goldmedalists for the Batch 2015-2019
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
                                                 Here</a>
                                         </p>
@@ -452,10 +505,24 @@
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">01-02-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">11-02-2020</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Infosys Hiring
-                                            Drive - Register before 10-02-2026 <a href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">B.Tech III
+                                            Year I Sem Reg/Supply – R15 Results Released
+                                            <a href="coming-soon.html"
+                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
+                                                Here</a>
+                                        </p>
+                                    </div>
+                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
+                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
+                                            <span
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">30-01-2020</span>
+                                        </div>
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">B.Tech IV Year
+                                            I Sem Reg/Supply – R15 Results Released
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
                                                 Here</a>
                                         </p>
@@ -463,49 +530,12 @@
                                 </div>
                             </div>
 
-                            <!-- Admissions Tab -->
+                            <!-- Circulars Tab -->
                             <div class="ann-panel" id="panel-admissions"
                                 style="display:none;height:100%;overflow:hidden;">
                                 <div
                                     style="padding:14px 20px;border-bottom:1px solid var(--border);background:var(--blue-50);">
-                                    <h4 style="font-size:15px;font-weight:700;color:var(--primary);margin:0;">Admission
-                                        Updates:</h4>
-                                </div>
-                                <div class="ann-scroll-inner" style="transition:transform 0.8s ease;">
-                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
-                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
-                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
-                                            <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">25-01-2026</span>
-                                        </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Admissions
-                                            Open
-                                            2025-26 – B.Tech, M.Tech, MBA, MCA <a href="admissions.html"
-                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a>
-                                        </p>
-                                    </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
-                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
-                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
-                                            <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">15-12-2025</span>
-                                        </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Scholarship
-                                            applications deadline extended to Feb 15th <a href="#"
-                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Forum Activities Tab -->
-                            <div class="ann-panel" id="panel-forums" style="display:none;height:100%;overflow:hidden;">
-                                <div
-                                    style="padding:14px 20px;border-bottom:1px solid var(--border);background:var(--blue-50);">
-                                    <h4 style="font-size:15px;font-weight:700;color:var(--primary);margin:0;">Forum
-                                        Activities:
+                                    <h4 style="font-size:15px;font-weight:700;color:var(--primary);margin:0;">Circulars:
                                     </h4>
                                 </div>
                                 <div class="ann-scroll-inner" style="transition:transform 0.8s ease;">
@@ -513,10 +543,11 @@
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">10-02-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">20-01-2020</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">IEEE Student
-                                            Branch - Workshop on "Deep Learning & Neural Networks" <a href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">M.Tech
+                                            Academic Calendar for Fourth Semester (2018-19 Batch)
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
                                                 Here</a>
                                         </p>
@@ -525,10 +556,11 @@
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">05-02-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">20-01-2020</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">ISTE Chapter -
-                                            Faculty Development Program on "Emerging Technologies" <a href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">B.Tech I Year
+                                            II Semester Academic Calendar
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
                                                 Here</a>
                                         </p>
@@ -537,11 +569,11 @@
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">28-01-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">07-01-2020</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">CSI Student
-                                            Branch
-                                            - Coding Contest "Code Sprint 2026" <a href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">Postponement
+                                            of B.Tech I Year I Semester Examinations on 08-01-2020
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
                                                 Here</a>
                                         </p>
@@ -550,36 +582,11 @@
                                         <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                                             <span style="color:#ea580c;font-size:16px;">🔥</span>
                                             <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">20-01-2026</span>
+                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">30-12-2019</span>
                                         </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">IETE Student
-                                            Forum
-                                            - Technical Talk on "5G & Beyond" <a href="#"
-                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a>
-                                        </p>
-                                    </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
-                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
-                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
-                                            <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">12-01-2026</span>
-                                        </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">IEEE & CSI
-                                            Joint
-                                            Event - Hackathon "InnoVate 2026" <a href="#"
-                                                style="color:#2563eb;font-weight:600;text-decoration:none;">Click
-                                                Here</a>
-                                        </p>
-                                    </div>
-                                    <div style="padding:14px 20px;border-bottom:1px solid var(--border);">
-                                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
-                                            <span style="color:#ea580c;font-size:16px;">🔥</span>
-                                            <span
-                                                style="font-weight:700;color:#1e3a8a;font-size:14px;">05-01-2026</span>
-                                        </div>
-                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">ISTE Chapter -
-                                            Seminar on "Sustainable Engineering Practices" <a href="#"
+                                        <p style="margin:0;font-size:13px;color:#374151;line-height:1.5;">II/III Year
+                                            B.Tech II Semester Academic Calendar
+                                            <a href="coming-soon.html"
                                                 style="color:#2563eb;font-weight:600;text-decoration:none;">Click
                                                 Here</a>
                                         </p>
@@ -715,8 +722,7 @@
                                 <!-- Event Image 1 -->
                                 <div class="carousel-item">
                                     <div class="image-wrapper">
-                                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=800&fit=crop"
-                                            alt="Convocation Ceremony 2025">
+                                        <img src="images/drkvsrit/EVENT1.png" alt="Convocation Ceremony 2025">
                                         <div class="image-overlay">
                                             <h4>Convocation Ceremony 2025</h4>
                                             <p>Celebrating our graduates' success</p>
@@ -727,8 +733,7 @@
                                 <!-- Event Image 2 -->
                                 <div class="carousel-item">
                                     <div class="image-wrapper">
-                                        <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1200&h=800&fit=crop"
-                                            alt="Technical Symposium">
+                                        <img src="images/drkvsrit/FRESHMAN (3).png" alt="Technical Symposium">
                                         <div class="image-overlay">
                                             <h4>Technical Symposium 2025</h4>
                                             <p>Innovation and technology showcase</p>
@@ -739,8 +744,7 @@
                                 <!-- Event Image 3 -->
                                 <div class="carousel-item">
                                     <div class="image-wrapper">
-                                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=800&fit=crop"
-                                            alt="Placement Drive">
+                                        <img src="images/drkvsrit/1.png" alt="Placement Drive">
                                         <div class="image-overlay">
                                             <h4>Campus Placement Drive</h4>
                                             <p>Top companies recruiting our students</p>
@@ -751,8 +755,7 @@
                                 <!-- Event Image 4 -->
                                 <div class="carousel-item">
                                     <div class="image-wrapper">
-                                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=800&fit=crop"
-                                            alt="Cultural Festival">
+                                        <img src="images/drkvsrit/FRESHMAN%20(3).png" alt="Cultural Festival">
                                         <div class="image-overlay">
                                             <h4>Annual Cultural Festival</h4>
                                             <p>Celebrating diversity and talent</p>
@@ -763,8 +766,7 @@
                                 <!-- Event Image 5 -->
                                 <div class="carousel-item">
                                     <div class="image-wrapper">
-                                        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&h=800&fit=crop"
-                                            alt="Sports Meet">
+                                        <img src="images/drkvsrit/EVENT1.png" alt="Sports Meet">
                                         <div class="image-overlay">
                                             <h4>Inter-College Sports Meet</h4>
                                             <p>Champions in action</p>
@@ -775,8 +777,7 @@
                                 <!-- Event Image 6 -->
                                 <div class="carousel-item">
                                     <div class="image-wrapper">
-                                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=800&fit=crop"
-                                            alt="Industry Workshop">
+                                        <img src="images/drkvsrit/1.png" alt="Industry Workshop">
                                         <div class="image-overlay">
                                             <h4>Industry Expert Workshop</h4>
                                             <p>Learning from the best</p>
@@ -804,6 +805,11 @@
                     <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Why DrKVSRIT</h2>
                     <h3 class="text-4xl font-extrabold text-gray-900 leading-tight">Pioneering Education for Tomorrow's
                         Leaders</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mt-4">When it comes to academics, the college has
+                        highly Ph.D. qualified and experienced faculty with expertise in various domains. The college
+                        revises the syllabi on regular basis incorporating advanced and emerging industry-oriented
+                        topics. As part of choice-based credit system (CBCS), students have an opportunity to take up a
+                        wide range of elective courses including interdisciplinary and multidisciplinary courses.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -822,8 +828,10 @@
                         </div>
                         <h4 class="text-xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors">
                             Credentials</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed">NBA & NAAC Accredited with A+ Grade. Ranked
-                            among Top 100 in Higher Education Review.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">DRKVSRIT is known for its quality initiatives
+                            which is amply reflected in accreditations. B.Tech programs (UG) in ECE & EEE accredited and
+                            CSE is re-accredited by NBA. NAAC accredited with 'A+' Grade in 1st Cycle 2022. The college
+                            got 100 rank in Higher Education Review.</p>
                     </div>
                     <!-- Feature 2 -->
                     <div
@@ -839,9 +847,11 @@
                             </svg>
                         </div>
                         <h4 class="text-xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors">
-                            Teaching Excellence</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed">Joyful journey of learning with JNTUA
-                            curriculum and innovative industry-ready process.</p>
+                            Teaching-Learning-Evaluation</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">The learning of a student at DrKVSRIT is a
+                            joyful journey transforming an aspiring young mind to an inspiring engineer responsive to
+                            societal and industrial needs. A well planned JNTUA curriculum along with innovative
+                            teaching and learning process is established for a successful career.</p>
                     </div>
                     <!-- Feature 3 -->
                     <div
@@ -857,9 +867,11 @@
                             </svg>
                         </div>
                         <h4 class="text-xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors">
-                            Placements</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed">Series of training programs bridging the gap
-                            between campus and global industrial requirements.</p>
+                            Training & Placements</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">The college is enabling students to realize
+                            their full potential and make the most of global opportunities. We plan and conduct a series
+                            of training programs for students to bridge the gap between campus teaching and industry
+                            requirement.</p>
                     </div>
                 </div>
             </div>
@@ -870,8 +882,8 @@
             <div class="max-w-7xl mx-auto px-4">
                 <div class="flex justify-between items-end mb-16">
                     <div>
-                        <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Undergraduate</h2>
-                        <h3 class="text-4xl font-extrabold text-gray-900">Featured Programs</h3>
+                        <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Courses Offered</h2>
+                        <h3 class="text-4xl font-extrabold text-gray-900">UG & PG Programs</h3>
                     </div>
                     <a href="courses\index.html"
                         class="text-blue-600 font-bold flex items-center gap-2 hover:gap-4 transition-all">View All
@@ -1076,6 +1088,199 @@
                             <p class="text-sm text-gray-500 font-medium mt-2">4 Years • B.Tech</p>
                         </div>
                     </a>
+
+                    <!-- MBA -->
+                    <a href="departments/mba/index.html"
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-2">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-300">
+                                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                <rect width="20" height="14" x="2" y="6" rx="2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                                MBA</h4>
+                            <p class="text-sm text-gray-500 font-medium mt-2">2 Years • PG</p>
+                        </div>
+                    </a>
+
+                    <!-- MCA -->
+                    <a href="departments/mca/index.html"
+                        class="group relative overflow-hidden rounded-3xl p-8 bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center justify-center text-center gap-6 aspect-[4/5] hover:-translate-y-2">
+                        <div
+                            class="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-300">
+                                <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                                <line x1="3" x2="21" y1="9" y2="9" />
+                                <line x1="9" x2="9" y1="21" y2="9" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                                MCA</h4>
+                            <p class="text-sm text-gray-500 font-medium mt-2">2 Years • PG</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             RANKING & RECOGNITION
+             ============================================ -->
+        <section class="py-16" style="background:linear-gradient(135deg, #f0f4ff 0%, #e8edfb 100%);">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Accreditations</h2>
+                    <h3 class="text-4xl font-extrabold text-gray-900 leading-tight">Ranking & Recognition</h3>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px;">
+                    <div style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+                        <img src="images/drkvsrit/AICTE@.png" alt="AICTE Approved"
+                            style="height:60px;width:auto;object-fit:contain;">
+                    </div>
+                    <div style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+                        <img src="images/drkvsrit/ugc@@@.png" alt="UGC Recognized"
+                            style="height:60px;width:auto;object-fit:contain;">
+                    </div>
+                    <div style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+                        <img src="images/drkvsrit/Jntua.png" alt="JNTUA Affiliated"
+                            style="height:60px;width:auto;object-fit:contain;">
+                    </div>
+                    <div style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+                        <img src="images/drkvsrit/NAAC.jpg" alt="NAAC A+ Accredited"
+                            style="height:60px;width:auto;object-fit:contain;">
+                    </div>
+                    <div style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+                        <img src="images/drkvsrit/NBA1@.png" alt="NBA Accredited"
+                            style="height:60px;width:auto;object-fit:contain;">
+                    </div>
+                    <div style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+                        <img src="images/drkvsrit/Nirf.png" alt="NIRF Ranked"
+                            style="height:60px;width:auto;object-fit:contain;">
+                    </div>
+                    <div style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+                        <img src="images/drkvsrit/nptel (1)...png" alt="NPTEL"
+                            style="height:60px;width:auto;object-fit:contain;">
+                    </div>
+                    <div style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+                        <img src="images/drkvsrit/HER_logo.jpg" alt="Higher Education Review"
+                            style="height:60px;width:auto;object-fit:contain;">
+                    </div>
+                    <div style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+                        <img src="images/drkvsrit/iic image.png" alt="IIC"
+                            style="height:60px;width:auto;object-fit:contain;">
+                    </div>
+                    <div style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+                        <img src="images/drkvsrit/ISO9001-stamp.png" alt="ISO 9001:2015 Certified"
+                            style="height:60px;width:auto;object-fit:contain;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             PLACEMENT PARTNERS / RECRUITERS
+             ============================================ -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4">Our Recruiters</h2>
+                    <h3 class="text-4xl font-extrabold text-gray-900 leading-tight">Top Placement Partners</h3>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px;">
+                    <div style="background:#fafbff;border-radius:16px;padding:24px 32px;box-shadow:0 1px 8px rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;min-width:140px;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 1px 8px rgba(0,0,0,0.04)'">
+                        <img src="images/drkvsrit/tata-group-logo-3840x2160-1.png" alt="Tata Group"
+                            style="height:40px;width:auto;object-fit:contain;filter:grayscale(40%);"
+                            onmouseover="this.style.filter='grayscale(0)'"
+                            onmouseout="this.style.filter='grayscale(40%)'">
+                    </div>
+                    <div style="background:#fafbff;border-radius:16px;padding:24px 32px;box-shadow:0 1px 8px rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;min-width:140px;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 1px 8px rgba(0,0,0,0.04)'">
+                        <img src="images/drkvsrit/wipro-primary-logo-color-rbg.png" alt="Wipro"
+                            style="height:40px;width:auto;object-fit:contain;filter:grayscale(40%);"
+                            onmouseover="this.style.filter='grayscale(0)'"
+                            onmouseout="this.style.filter='grayscale(40%)'">
+                    </div>
+                    <div style="background:#fafbff;border-radius:16px;padding:24px 32px;box-shadow:0 1px 8px rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;min-width:140px;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 1px 8px rgba(0,0,0,0.04)'">
+                        <img src="images/drkvsrit/capgemini_ogo.svg_.png" alt="Capgemini"
+                            style="height:40px;width:auto;object-fit:contain;filter:grayscale(40%);"
+                            onmouseover="this.style.filter='grayscale(0)'"
+                            onmouseout="this.style.filter='grayscale(40%)'">
+                    </div>
+                    <div style="background:#fafbff;border-radius:16px;padding:24px 32px;box-shadow:0 1px 8px rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;min-width:140px;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 1px 8px rgba(0,0,0,0.04)'">
+                        <img src="images/drkvsrit/hexaware_technologies-logo.wine_.png" alt="Hexaware"
+                            style="height:40px;width:auto;object-fit:contain;filter:grayscale(40%);"
+                            onmouseover="this.style.filter='grayscale(0)'"
+                            onmouseout="this.style.filter='grayscale(40%)'">
+                    </div>
+                    <div style="background:#fafbff;border-radius:16px;padding:24px 32px;box-shadow:0 1px 8px rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;min-width:140px;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 1px 8px rgba(0,0,0,0.04)'">
+                        <img src="images/drkvsrit/mindtree-logo-2012.png" alt="Mindtree"
+                            style="height:40px;width:auto;object-fit:contain;filter:grayscale(40%);"
+                            onmouseover="this.style.filter='grayscale(0)'"
+                            onmouseout="this.style.filter='grayscale(40%)'">
+                    </div>
+                    <div style="background:#fafbff;border-radius:16px;padding:24px 32px;box-shadow:0 1px 8px rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;min-width:140px;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 1px 8px rgba(0,0,0,0.04)'">
+                        <img src="images/drkvsrit/virtusa-logo.png" alt="Virtusa"
+                            style="height:40px;width:auto;object-fit:contain;filter:grayscale(40%);"
+                            onmouseover="this.style.filter='grayscale(0)'"
+                            onmouseout="this.style.filter='grayscale(40%)'">
+                    </div>
+                    <div style="background:#fafbff;border-radius:16px;padding:24px 32px;box-shadow:0 1px 8px rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;min-width:140px;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 1px 8px rgba(0,0,0,0.04)'">
+                        <img src="images/drkvsrit/paytm-logo-with-white-border-png-image.png" alt="Paytm"
+                            style="height:40px;width:auto;object-fit:contain;filter:grayscale(40%);"
+                            onmouseover="this.style.filter='grayscale(0)'"
+                            onmouseout="this.style.filter='grayscale(40%)'">
+                    </div>
+                    <div style="background:#fafbff;border-radius:16px;padding:24px 32px;box-shadow:0 1px 8px rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;min-width:140px;transition:transform 0.3s,box-shadow 0.3s;"
+                        onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+                        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 1px 8px rgba(0,0,0,0.04)'">
+                        <img src="images/drkvsrit/modakanalaytics.png" alt="Modak Analytics"
+                            style="height:40px;width:auto;object-fit:contain;filter:grayscale(40%);"
+                            onmouseover="this.style.filter='grayscale(0)'"
+                            onmouseout="this.style.filter='grayscale(40%)'">
+                    </div>
                 </div>
             </div>
         </section>

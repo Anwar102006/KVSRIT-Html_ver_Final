@@ -1,0 +1,1281 @@
+/* ==========================================================================
+   KVSRIT - Comprehensive Mobile Responsive Styles
+   Breakpoints: Mobile < 640px | Tablet 640-1023px | Desktop 1024px+
+   ========================================================================== */
+
+/* ==========================================================================
+   0. GLOBAL BOX MODEL & OVERFLOW PREVENTION
+   ========================================================================== */
+
+html {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   1. BODY PADDING (fixed navbar height per breakpoint)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 68px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    body {
+        padding-top: 112px;
+    }
+}
+
+/* ==========================================================================
+   2. LOADER - Prevent bleed on small screens
+   ========================================================================== */
+
+.loader-overlay {
+    overflow: hidden !important;
+}
+
+.loader-container {
+    overflow: hidden !important;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+    .loader-circle {
+        width: 160px !important;
+        height: 160px !important;
+    }
+
+    .loader-title {
+        font-size: 1.2rem !important;
+        letter-spacing: 3px !important;
+    }
+
+    #quote {
+        font-size: 0.85rem !important;
+        max-width: 90% !important;
+    }
+
+    .loader-subtitle {
+        font-size: 0.7rem !important;
+    }
+
+    .loader-text {
+        margin-top: 80px !important;
+    }
+
+    .loader-progress-container {
+        width: 240px !important;
+    }
+}
+
+/* ==========================================================================
+   3. PAGE & SECTION OVERFLOW PREVENTION
+   NOTE: Do NOT put overflow-x:hidden on <section> — it clips
+   text inside dept-section cards and similar content boxes.
+   ========================================================================== */
+
+main,
+header,
+footer {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+section {
+    max-width: 100%;
+    /* No overflow-x:hidden here — it clips card content */
+}
+
+/* ==========================================================================
+   4. TOP CONTACT BAR - Hide on Mobile
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    #navbar-placeholder>div:first-child {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   5. MAIN NAVBAR - Mobile
+   THE KEY FIX: #main-nav must NOT have max-height or overflow:hidden
+   so the mobile menu dropdown can expand below it.
+   We constrain only #nav-inner (the top bar) to 60-80px.
+   ========================================================================== */
+
+@media (max-width: 1279px) {
+
+    /* The nav itself: let it grow when mobile menu opens */
+    #main-nav {
+        height: auto !important;
+        min-height: 60px !important;
+        max-height: none !important;
+        overflow: visible !important;
+        flex-wrap: wrap !important;
+    }
+
+    /* Only the top bar (logo + hamburger row) is constrained */
+    #nav-inner {
+        height: 60px !important;
+        min-height: 60px !important;
+        max-height: 60px !important;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        flex-basis: 100% !important;
+        /* Take full row 1 */
+    }
+
+    /* Mobile menu: full-width dropdown with scroll */
+    #mobile-menu {
+        display: none;
+        max-height: calc(100vh - 68px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100% !important;
+        flex-basis: 100% !important;
+        /* Take full row 2 (below nav-inner) */
+    }
+
+    /* When toggled open (hidden class removed), show it */
+    #mobile-menu:not(.hidden) {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #main-nav img {
+        height: 36px !important;
+        width: auto !important;
+    }
+
+    #main-nav h1 {
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+    }
+
+    #mobile-menu-btn {
+        display: flex !important;
+    }
+}
+
+/* ==========================================================================
+   6. HERO SECTION - THE MAIN FIX
+   ========================================================================== */
+
+.hero-slider {
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Mobile (< 640px) --- */
+@media (max-width: 639px) {
+    .hero-slider {
+        height: 480px !important;
+    }
+
+    /* Hero overlay: anchor to bottom so content is always readable */
+    #heroContentOverlay {
+        align-items: flex-end !important;
+        padding: 0 1rem 2rem 1rem !important;
+        width: 100% !important;
+    }
+
+    /* Inner text block: full width, no overflow */
+    .hero-text-block {
+        max-width: 100% !important;
+        width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    /* Heading */
+    .hero-heading {
+        font-size: 1.85rem !important;
+        line-height: 1.2 !important;
+        word-break: break-word !important;
+        margin-top: 0.75rem !important;
+    }
+
+    /* Paragraph */
+    .hero-paragraph {
+        font-size: 0.875rem !important;
+        line-height: 1.55 !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        margin-top: 0.75rem !important;
+    }
+
+    /* Buttons: stack full-width */
+    .hero-buttons {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .hero-buttons a {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 13px 20px !important;
+        font-size: 0.9rem !important;
+        box-sizing: border-box !important;
+    }
+
+    /* NAAC badge */
+    #heroContentOverlay .inline-flex {
+        font-size: 9px !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Hide quick stats bar */
+    #heroSlider .hidden {
+        display: none !important;
+    }
+}
+
+/* --- Tablet (640-1023px) --- */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .hero-slider {
+        height: 520px !important;
+    }
+
+    .hero-heading {
+        font-size: 2.4rem !important;
+    }
+
+    #heroContentOverlay {
+        padding: 0 2rem !important;
+    }
+}
+
+/* Hide stats bar on mobile */
+@media (max-width: 767px) {
+    #heroSlider .hidden {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   7. TYPOGRAPHY SCALING
+   ========================================================================== */
+
+@media (max-width: 639px) {
+    .text-7xl {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .text-5xl {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .text-4xl {
+        font-size: 1.75rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .text-3xl {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .py-24 {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    .py-20 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .py-16 {
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
+    }
+
+    .max-w-7xl,
+    .max-w-6xl,
+    .max-w-5xl,
+    .max-w-4xl,
+    .max-w-3xl,
+    .max-w-2xl {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        width: 100% !important;
+    }
+
+    .mb-16 {
+        margin-bottom: 2rem !important;
+    }
+
+    .mb-20 {
+        margin-bottom: 2rem !important;
+    }
+}
+
+/* ==========================================================================
+   8. NEWS & UPDATES SECTION
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    .news-section {
+        padding: 2.5rem 1rem !important;
+    }
+
+    .section-title {
+        font-size: 1.6rem !important;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem !important;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+
+    /* Tabs: make them horizontally scrollable instead of squishing */
+    .news-text-container>div:first-child {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        gap: 0 !important;
+    }
+
+    .news-text-container>div:first-child::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ann-tab {
+        font-size: 10px !important;
+        padding: 7px 8px !important;
+        min-width: max-content !important;
+        flex-shrink: 0 !important;
+    }
+
+    .image-carousel-wrapper {
+        height: 280px !important;
+    }
+
+    .news-scroll-wrapper {
+        height: 350px !important;
+    }
+
+    #annTabContent {
+        height: 350px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 968px) {
+    .news-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ==========================================================================
+   9. WHY CHOOSE KVSRIT SECTION
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    .grid.grid-cols-1.md\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .bg-white.p-10.rounded-3xl {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .grid.grid-cols-1.md\:grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+/* ==========================================================================
+   10. FEATURED PROGRAMS SECTION
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    .flex.justify-between.items-end.mb-16,
+    .flex.justify-between.items-center.mb-16 {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.75rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+@media (max-width: 639px) {
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.75rem !important;
+    }
+
+    .w-20.h-20 {
+        width: 2.75rem !important;
+        height: 2.75rem !important;
+    }
+
+    .w-10.h-10 {
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+    }
+
+    h4.text-xl {
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+/* ==========================================================================
+   11. FOOTER
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    footer .grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    footer .max-w-7xl {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    footer .flex.justify-between {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 0.75rem !important;
+        align-items: center !important;
+    }
+}
+
+/* ==========================================================================
+   12. CHATBOT WIDGET
+   ========================================================================== */
+
+@media (max-width: 639px) {
+    .chat-widget-toggle {
+        bottom: 16px !important;
+        right: 16px !important;
+        width: 52px !important;
+        height: 52px !important;
+    }
+
+    .chat-window {
+        width: calc(100vw - 32px) !important;
+        right: 16px !important;
+        bottom: 80px !important;
+        max-height: 60vh !important;
+    }
+}
+
+/* ==========================================================================
+   13. TOUCH IMPROVEMENTS
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+
+    a,
+    button {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* ==========================================================================
+   14. GENERIC CONTENT OVERFLOW PREVENTION
+   Prevent ANY content from being clipped on small screens.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* All containers: ensure children can wrap and not overflow */
+    .container,
+    .max-w-7xl,
+    .max-w-6xl,
+    .max-w-5xl,
+    .max-w-4xl,
+    .max-w-3xl,
+    .max-w-2xl {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Flex containers: allow wrapping */
+    .flex {
+        min-width: 0;
+    }
+
+    /* Flex children: prevent overflow */
+    .flex>* {
+        min-width: 0;
+    }
+
+    /* Grids: ensure single column on very small screens */
+    .grid {
+        min-width: 0;
+    }
+
+    .grid>* {
+        min-width: 0;
+    }
+
+    /* Text elements: prevent overflow with word-break */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    a,
+    li,
+    td,
+    th,
+    .text-3xl,
+    .text-4xl,
+    .text-5xl,
+    .text-7xl {
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    /* Department page content boxes — force text to wrap */
+    .dept-section,
+    .dept-vision-box,
+    .dept-mission-text,
+    .dept-mission-item,
+    .dept-mission-list,
+    .dept-hod-message,
+    .dept-research-description,
+    .dept-hero-description,
+    .dept-sidebar-card,
+    .dept-resource-title,
+    .dept-faculty-name,
+    .dept-faculty-designation {
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        min-width: 0 !important;
+    }
+
+    /* All containers inside white card boxes */
+    .dept-section * {
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    /* Prevent wide inline elements from causing horizontal scroll */
+    table {
+        display: block;
+        width: 100% !important;
+        overflow-x: auto;
+    }
+
+    /* iframes / embeds */
+    iframe,
+    video,
+    embed,
+    object {
+        max-width: 100% !important;
+    }
+}
+
+/* ==========================================================================
+   15. PROGRAMS / FEATURED CARDS - proper 2-col mobile layout
+   ========================================================================== */
+
+@media (max-width: 639px) {
+
+    /* Program cards: reduce aspect ratio and padding on mobile */
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4>a {
+        aspect-ratio: auto !important;
+        padding: 1.25rem !important;
+        gap: 0.75rem !important;
+    }
+
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4>a .w-20.h-20 {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4>a .w-10.h-10 {
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+    }
+
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 h4.text-xl {
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
+    }
+}
+
+/* ==========================================================================
+   16. WHY CHOOSE KVSRIT SECTION - Mobile card padding
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    .bg-white.p-10.rounded-3xl {
+        padding: 1.5rem !important;
+    }
+}
+
+/* ==========================================================================
+   17. INNER PAGE HERO SECTIONS
+   All inner pages use a colored hero banner at the top.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Generic inner-page hero banners */
+    .bg-blue-900.text-white.py-16,
+    .relative.text-white.py-24,
+    .dept-hero {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    .bg-blue-900.text-white.py-16 h1,
+    .relative.text-white.py-24 h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .bg-blue-900.text-white.py-16 p,
+    .relative.text-white.py-24 p {
+        font-size: 0.95rem !important;
+    }
+
+    /* Hero decorative blur circles - shrink on mobile */
+    .w-96.h-96 {
+        width: 12rem !important;
+        height: 12rem !important;
+    }
+}
+
+/* ==========================================================================
+   18. INNER PAGE CARD & BOX PADDING
+   Cards and boxes with large padding that clip content on small screens.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Cards with p-8 padding */
+    .p-8 {
+        padding: 1.25rem !important;
+    }
+
+    /* Cards with extra large p-12 padding (About page Vision/Mission) */
+    .bg-white.p-12,
+    .p-12 {
+        padding: 1.25rem !important;
+    }
+
+    /* Rounded 3xl cards with p-8 (used in campus-life, about, etc) */
+    .rounded-3xl.p-8,
+    .rounded-2xl.p-8 {
+        padding: 1.25rem !important;
+    }
+
+    /* Professional chapter cards (campus-life) */
+    .rounded-3xl.p-6 {
+        padding: 1rem !important;
+    }
+
+    /* Content white card containers */
+    .bg-white.rounded-lg.shadow-sm {
+        padding: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .p-8 {
+        padding: 1rem !important;
+    }
+
+    .p-12 {
+        padding: 1rem !important;
+    }
+}
+
+/* ==========================================================================
+   19. INNER PAGE GRID LAYOUTS - SINGLE COLUMN ON MOBILE
+   All multi-column grids collapse to 1 column on mobile.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* 2-column grids */
+    .grid.md\:grid-cols-2,
+    .grid.lg\:grid-cols-2,
+    .grid.grid-cols-1.lg\:grid-cols-2 {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+
+    /* 3-column grids */
+    .grid.md\:grid-cols-3,
+    .grid.lg\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+
+    /* 4-column grids */
+    .grid.md\:grid-cols-2.lg\:grid-cols-4,
+    .grid.lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+
+    /* 2-col auto grids */
+    .grid.sm\:grid-cols-2 {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* Stats grids (placement page) */
+    .grid.sm\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+
+    /* Large gap reductions */
+    .gap-20 {
+        gap: 1.5rem !important;
+    }
+
+    .gap-12 {
+        gap: 1.5rem !important;
+    }
+
+    .gap-8 {
+        gap: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* On very small screens, even 2-col grids go to 1 */
+    .grid.md\:grid-cols-2.lg\:grid-cols-4,
+    .grid.lg\:grid-cols-4,
+    .grid.sm\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ==========================================================================
+   20. FLEX LAYOUTS - Stack on mobile
+   Flex rows that should become vertical on small screens.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Generic flex row to column */
+    .flex.flex-col.lg\:flex-row,
+    .flex.md\:flex-row {
+        flex-direction: column !important;
+    }
+
+    /* About page - intro alongside image */
+    .grid.grid-cols-1.lg\:grid-cols-2.gap-20 {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Professional chapters layout (campus-life) */
+    .lg\:w-1\/3 {
+        width: 100% !important;
+    }
+
+    .lg\:w-2\/3 {
+        width: 100% !important;
+    }
+
+    /* Flex row items that should stack */
+    .flex.items-center.gap-4 {
+        flex-wrap: wrap !important;
+    }
+
+    /* Academic calendar flex row */
+    .flex.flex-col.md\:flex-row {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+}
+
+/* ==========================================================================
+   21. DEPARTMENT PAGES - Mobile tweaks
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    .dept-hero {
+        padding: 2.5rem 0 !important;
+    }
+
+    .dept-hero h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .dept-hero-description {
+        font-size: 0.95rem !important;
+    }
+
+    .dept-container {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .dept-section {
+        padding: 1.25rem !important;
+    }
+
+    .dept-sidebar-card {
+        padding: 1.25rem !important;
+    }
+
+    /* Timetable: allow horizontal scroll */
+    .dept-timetable-container {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dept-timetable {
+        min-width: 500px;
+    }
+
+    /* Resources grid - single col */
+    .dept-resources-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Research grid - single col */
+    .dept-research-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Faculty list items - tighter spacing */
+    .dept-faculty-item {
+        gap: 0.5rem !important;
+    }
+
+    /* HOD profile - stack on very small */
+    .dept-hod-profile {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    /* Section headers */
+    .dept-section-header {
+        font-size: 1.25rem !important;
+    }
+
+    /* Curriculum tags wrap nicely */
+    .dept-curriculum-tags {
+        gap: 0.35rem !important;
+    }
+
+    .dept-curriculum-tag {
+        font-size: 0.75rem !important;
+        padding: 0.2rem 0.5rem !important;
+    }
+}
+
+/* ==========================================================================
+   22. ABOUT PAGE - Mobile tweaks
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* About page - image decorative circle */
+    .absolute.-bottom-10.-right-10 {
+        display: none !important;
+    }
+
+    /* About page - stat badges grid */
+    .mt-12.grid.grid-cols-2 {
+        gap: 1rem !important;
+    }
+
+    .mt-12.grid.grid-cols-2 .text-3xl {
+        font-size: 1.5rem !important;
+    }
+
+    /* About page - Vision/Mission large cards */
+    .bg-white.p-12.rounded-\[40px\] {
+        padding: 1.25rem !important;
+        border-radius: 1rem !important;
+    }
+
+    /* About page - leadership grid */
+    .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Images - ensure they fit */
+    .rounded-\[40px\] {
+        border-radius: 1rem !important;
+    }
+}
+
+/* ==========================================================================
+   23. STUDENT PORTAL PAGE - Mobile tweaks
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Student portal hero */
+    .student-portal-hero {
+        padding: 2.5rem 0 1.5rem !important;
+    }
+
+    .student-portal-hero h1 {
+        font-size: 1.75rem !important;
+    }
+
+    /* Student portal main area */
+    main {
+        margin-top: 68px !important;
+    }
+}
+
+/* ==========================================================================
+   24. PLACEMENTS PAGE - Mobile tweaks
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Stats cards overlap banner */
+    .relative.-mt-12 {
+        margin-top: -0.5rem !important;
+    }
+
+    /* Steps / process cards */
+    .grid.md\:grid-cols-2.lg\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* Recruiter logos grid */
+    .grid.grid-cols-2.sm\:grid-cols-3.md\:grid-cols-4.lg\:grid-cols-6 {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+}
+
+/* ==========================================================================
+   25. CAMPUS LIFE & EVENTS - Mobile tweaks
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Event tall cards - reduce height on mobile */
+    .h-96 {
+        height: 16rem !important;
+    }
+
+    .h-96 .text-2xl {
+        font-size: 1.25rem !important;
+    }
+
+    .h-96 .p-8 {
+        padding: 1rem !important;
+    }
+
+    /* Club cards icon containers */
+    .w-16.h-16 {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .w-16.h-16 svg,
+    .w-16.h-16 .h-8 {
+        width: 1.25rem !important;
+        height: 1.25rem !important;
+    }
+
+    /* Section badges */
+    .mb-16 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Large section heading text */
+    .text-4xl.font-bold {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+
+    /* Section subtitles */
+    .text-xl.text-gray-600 {
+        font-size: 0.95rem !important;
+    }
+
+    /* CTA buttons */
+    .px-8.py-4 {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* ==========================================================================
+   26. TAB NAVIGATION - Mobile scrollable
+   Academics, portal, and other tabbed interfaces.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Horizontal scrollable tab bar */
+    #program-tabs,
+    .flex.flex-wrap.gap-2.mb-8 {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        gap: 0.25rem !important;
+        padding-bottom: 0 !important;
+    }
+
+    #program-tabs::-webkit-scrollbar,
+    .flex.flex-wrap.gap-2.mb-8::-webkit-scrollbar {
+        display: none;
+    }
+
+    #program-tabs button {
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        padding: 0.6rem 1rem !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+/* ==========================================================================
+   27. TABLES - Responsive scrollable
+   All tables get horizontal scroll on mobile.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    table {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table thead,
+    table tbody,
+    table tr {
+        display: block;
+    }
+
+    /* Prevent table cells from shrinking too much */
+    td,
+    th {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* ==========================================================================
+   28. SECTION PADDING REDUCTION
+   Large py-16, py-20, py-24 paddings are too big on mobile.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    .py-16 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .py-20 {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    .py-24 {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    .py-12 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    /* Large horizontal paddings */
+    .px-8 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .px-6 {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+}
+
+/* ==========================================================================
+   29. LARGE TEXT INSIDE BOXES
+   Fix headings inside cards that are too large on mobile.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Generic card headings */
+    .text-2xl {
+        font-size: 1.25rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .text-xl {
+        font-size: 1.05rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .text-lg {
+        font-size: 0.95rem !important;
+    }
+
+    /* Section titles inside cards */
+    h2.text-4xl,
+    h2.text-3xl {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+
+    /* Inner hero h1 */
+    h1.text-4xl,
+    h1.text-5xl {
+        font-size: 1.75rem !important;
+        line-height: 1.25 !important;
+    }
+
+    /* md:text-5xl and md:text-6xl overrides */
+    .md\:text-5xl,
+    .md\:text-6xl {
+        font-size: 1.75rem !important;
+        line-height: 1.25 !important;
+    }
+}
+
+/* ==========================================================================
+   30. IMAGES & MEDIA IN BOXES
+   Ensure images inside feature cards don't overflow.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Rounded images */
+    .shadow-2xl {
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    /* Fixed width/height icon containers */
+    .w-14.h-14 {
+        width: 2.75rem !important;
+        height: 2.75rem !important;
+    }
+
+    .w-12.h-12 {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+}
+
+/* ==========================================================================
+   31. DISCLOSURE & IQAC PAGES - Table/List layouts
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Disclosure tables */
+    .disclosures-container {
+        padding: 1rem !important;
+    }
+
+    /* IQAC content */
+    .iqac-content {
+        padding: 1rem !important;
+    }
+}
+
+/* ==========================================================================
+   32. BACK-TO-TOP & FLOATING ELEMENTS
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Ensure floating buttons don't overlap content */
+    #backToTop {
+        bottom: 1rem !important;
+        right: 1rem !important;
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+}
+
+/* ==========================================================================
+   33. SPACE-Y UTILITIES - Reduce vertical spacing in lists
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    .space-y-6>*+* {
+        margin-top: 1rem !important;
+    }
+
+    .space-y-3>*+* {
+        margin-top: 0.5rem !important;
+    }
+
+    .space-y-4>*+* {
+        margin-top: 0.75rem !important;
+    }
+}
