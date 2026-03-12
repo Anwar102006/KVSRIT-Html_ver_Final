@@ -7,14 +7,16 @@
     <title>About Us | KVSRIT - Dr. K.V. Subba Reddy Institute of Technology</title>
     <meta name="description"
         content="Learn about Dr. K.V. Subba Reddy Institute of Technology (DRKVSRIT), established in 2007, affiliated to JNTUA, approved by AICTE, and accredited by NAAC with A+ Grade.">
-    <link rel="stylesheet" href="css/core.css">
-    <link rel="stylesheet" href="css/navbar-enhanced.css">
+    <link rel="stylesheet" href="../css/core.css">
+
+    <!-- Navbar Enhanced CSS -->
+    <link rel="stylesheet" href="../css/navbar-enhanced.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Mobile Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
@@ -112,15 +114,6 @@
             background-clip: text;
         }
 
-        .about-hero-subtitle {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
         .about-hero-motto {
             font-size: 1rem;
             color: rgba(165, 190, 255, 0.8);
@@ -186,34 +179,42 @@
             background: linear-gradient(to top, rgba(12, 29, 74, 0.9), transparent);
         }
 
-        /* ===== Graduation Cap Decoration ===== */
-        .cap-decoration {
-            position: relative;
-            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-            padding: 50px 0;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* ===== Stats Bar ===== */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            background: linear-gradient(135deg, #0c1d4a 0%, #1a3a8a 100%);
         }
 
-        .cap-decoration img {
-            max-width: 300px;
-            height: auto;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
-            animation: capFloat 3s ease-in-out infinite;
+        .stat-item {
+            text-align: center;
+            padding: 40px 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background 0.3s;
         }
 
-        @keyframes capFloat {
+        .stat-item:last-child {
+            border-right: none;
+        }
 
-            0%,
-            100% {
-                transform: translateY(0);
-            }
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
 
-            50% {
-                transform: translateY(-10px);
-            }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #fbbf24;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         /* ===== About Content Section ===== */
@@ -384,47 +385,27 @@
             color: #111827;
         }
 
-        /* ===== Stats Bar ===== */
-        .stats-bar {
+        /* ===== Affiliate Badges ===== */
+        .affiliate-badges {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-            background: linear-gradient(135deg, #0c1d4a 0%, #1a3a8a 100%);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
         }
 
-        .stat-item {
-            text-align: center;
-            padding: 40px 20px;
-            border-right: 1px solid rgba(255, 255, 255, 0.1);
-            transition: background 0.3s;
-        }
-
-        .stat-item:last-child {
-            border-right: none;
-        }
-
-        .stat-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
+        .affiliate-badges .badge-value {
+            font-size: 1.8rem;
             font-weight: 900;
-            color: #fbbf24;
-            margin-bottom: 4px;
+            color: #3b5bdb;
         }
 
-        .stat-label {
-            font-size: 0.75rem;
+        .affiliate-badges .badge-label {
+            font-size: 0.7rem;
+            color: #6b7280;
             font-weight: 700;
-            color: rgba(255, 255, 255, 0.7);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            margin-top: 4px;
         }
-
-        /* ===== Programmes Offered (keep existing) ===== */
-        /* ===== Leadership (keep existing) ===== */
-        /* ===== Accreditations (keep existing) ===== */
 
         /* ===== Responsive ===== */
         @media (max-width: 1024px) {
@@ -465,15 +446,27 @@
             .stat-item:nth-child(2) {
                 border-right: none;
             }
+
+            .programmes-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .vm-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .campus-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .leadership-grid {
+                grid-template-columns: 1fr !important;
+            }
         }
 
         @media (max-width: 640px) {
             .about-hero-title {
                 font-size: 1.8rem;
-            }
-
-            .about-hero-subtitle {
-                font-size: 1.1rem;
             }
 
             .about-heading,
@@ -489,6 +482,15 @@
             .stats-bar {
                 grid-template-columns: 1fr 1fr;
             }
+
+            .affiliate-badges {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+
+            .affiliate-badges .badge-value {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
@@ -503,12 +505,12 @@
         <section class="about-hero">
             <div class="about-hero-grid">
                 <div class="about-hero-image">
-                    <img src="images/about/aboutus-slider1.jpg"
+                    <img src="../images/about/aboutus-slider1.jpg"
                         alt="Dr. K.V. Subba Reddy Institute of Technology Campus Building">
                 </div>
                 <div class="about-hero-content">
                     <nav class="breadcrumb">
-                        <a href="index.html">Home</a>
+                        <a href="../index.html">Home</a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="m9 18 6-6-6-6" />
@@ -534,7 +536,7 @@
                 <h2>Founders</h2>
             </div>
             <div class="founders-image-container">
-                <img src="images/about/aboutus-slider2.jpg"
+                <img src="../images/about/aboutus-slider2.jpg"
                     alt="Dr. K.V. Subba Reddy - Founder and Chairman of DRKVSRIT with leadership team">
                 <div class="founders-image-overlay"></div>
             </div>
@@ -584,25 +586,18 @@
                         continue our march forward.
                     </p>
 
-                    <div class="mt-12 grid grid-cols-3 gap-6"
-                        style="margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+                    <div class="affiliate-badges">
                         <div>
-                            <div style="font-size:1.8rem;font-weight:900;color:#3b5bdb;">JNTUA</div>
-                            <div
-                                style="font-size:0.7rem;color:#6b7280;font-weight:700;text-transform:uppercase;margin-top:4px;">
-                                Affiliated To</div>
+                            <div class="badge-value">JNTUA</div>
+                            <div class="badge-label">Affiliated To</div>
                         </div>
                         <div>
-                            <div style="font-size:1.8rem;font-weight:900;color:#3b5bdb;">NAAC A+</div>
-                            <div
-                                style="font-size:0.7rem;color:#6b7280;font-weight:700;text-transform:uppercase;margin-top:4px;">
-                                Accredited With</div>
+                            <div class="badge-value">NAAC A+</div>
+                            <div class="badge-label">Accredited With</div>
                         </div>
                         <div>
-                            <div style="font-size:1.8rem;font-weight:900;color:#3b5bdb;">AICTE</div>
-                            <div
-                                style="font-size:0.7rem;color:#6b7280;font-weight:700;text-transform:uppercase;margin-top:4px;">
-                                Approved By</div>
+                            <div class="badge-value">AICTE</div>
+                            <div class="badge-label">Approved By</div>
                         </div>
                     </div>
                 </div>
@@ -613,7 +608,8 @@
         <section class="history-section">
             <div class="history-grid">
                 <div class="history-slider" id="historySlider">
-                    <img id="historySliderImg" src="images/about/aboutus-slider1.jpg" alt="DRKVSRIT Campus and Events">
+                    <img id="historySliderImg" src="../images/about/aboutus-slider1.jpg"
+                        alt="DRKVSRIT Campus and Events">
                     <button class="slider-nav prev" onclick="changeHistorySlide(-1)" aria-label="Previous slide">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -641,7 +637,8 @@
                         for Technical Education (AICTE), New Delhi.
                     </p>
                     <p class="history-text">
-                        The College is headed by its Founder and Chairman, <strong>Dr. K. V. Subba Reddy</strong>.
+                        The College is headed by its Founder and Chairman, <strong>Dr. K. V. Subba
+                            Reddy</strong>.
                         In recognition of his outstanding service to India in offering quality education, he is
                         conferred with <strong>Jewel of India</strong> award by Indian Solidarity Council on
                         13<sup>th</sup> March 2006.
@@ -659,7 +656,7 @@
         </section>
 
         <!-- ===== Programmes Offered ===== -->
-        <section class="py-24 bg-white" style="padding: 100px 0; background: #fff;">
+        <section style="padding: 100px 0; background: #fff;">
             <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
                 <div style="text-align:center;margin-bottom:64px;">
                     <h2
@@ -667,7 +664,7 @@
                         Academics</h2>
                     <h3 style="font-size:2.5rem;font-weight:900;color:#111827;">Programmes Offered</h3>
                 </div>
-                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+                <div class="programmes-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
                     <!-- UG Programs -->
                     <div style="background:#f8fafc;padding:40px;border-radius:24px;border:1px solid #e5e7eb;">
                         <div
@@ -679,27 +676,37 @@
                                 <path d="M6 12v5c3 3 9 3 12 0v-5" />
                             </svg>
                         </div>
-                        <h4 style="font-size:1.25rem;font-weight:800;color:#111827;margin-bottom:16px;">B.Tech (UG)</h4>
+                        <h4 style="font-size:1.25rem;font-weight:800;color:#111827;margin-bottom:16px;">B.Tech (UG)
+                        </h4>
                         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#3b5bdb;border-radius:50%;flex-shrink:0;"></span>CSE
                             </li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#3b5bdb;border-radius:50%;flex-shrink:0;"></span>CSE
-                                (AI &amp; ML)</li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                                (AI &amp; ML)
+                            </li>
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#3b5bdb;border-radius:50%;flex-shrink:0;"></span>CSE
-                                (Data Science)</li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                                (Data Science)
+                            </li>
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#3b5bdb;border-radius:50%;flex-shrink:0;"></span>ECE
                             </li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#3b5bdb;border-radius:50%;flex-shrink:0;"></span>EEE
                             </li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#3b5bdb;border-radius:50%;flex-shrink:0;"></span>ME
                             </li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#3b5bdb;border-radius:50%;flex-shrink:0;"></span>CE
                             </li>
                         </ul>
@@ -715,20 +722,26 @@
                                 <path d="M22 3h-6a4 4 0 0 1-4 4v14a3 3 0 0 0 3-3h7z" />
                             </svg>
                         </div>
-                        <h4 style="font-size:1.25rem;font-weight:800;color:#111827;margin-bottom:16px;">M.Tech (PG)</h4>
+                        <h4 style="font-size:1.25rem;font-weight:800;color:#111827;margin-bottom:16px;">M.Tech (PG)
+                        </h4>
                         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#d97706;border-radius:50%;flex-shrink:0;"></span>VLSI
                             </li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#d97706;border-radius:50%;flex-shrink:0;"></span>ESD
                             </li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#d97706;border-radius:50%;flex-shrink:0;"></span>CSE
                             </li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#d97706;border-radius:50%;flex-shrink:0;"></span>Structural
-                                Engineering</li>
+                                Engineering
+                            </li>
                         </ul>
                     </div>
                     <!-- Management & Polytechnic -->
@@ -745,18 +758,22 @@
                         <h4 style="font-size:1.25rem;font-weight:800;color:#111827;margin-bottom:16px;">MBA, MCA &amp;
                             Polytechnic</h4>
                         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#059669;border-radius:50%;flex-shrink:0;"></span>MBA
                             </li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#059669;border-radius:50%;flex-shrink:0;"></span>MCA
                             </li>
                             <li
                                 style="display:flex;align-items:center;gap:10px;color:#6b7280;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-top:8px;">
                                 Polytechnic Programmes:</li>
-                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;"><span
+                            <li style="display:flex;align-items:center;gap:10px;color:#4b5563;font-size:0.9rem;">
+                                <span
                                     style="width:6px;height:6px;background:#059669;border-radius:50%;flex-shrink:0;"></span>CSE,
-                                ECE, EEE, CE, ME</li>
+                                ECE, EEE, CE, ME
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -772,7 +789,7 @@
                         Our Purpose</h2>
                     <h3 style="font-size:2.5rem;font-weight:900;color:#111827;">Vision &amp; Mission</h3>
                 </div>
-                <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:32px;">
+                <div class="vm-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:32px;">
                     <div
                         style="background:#fff;padding:48px;border-radius:32px;box-shadow:0 1px 3px rgba(0,0,0,0.06);border:1px solid #f1f3f5;">
                         <div
@@ -786,9 +803,8 @@
                         </div>
                         <h3 style="font-size:1.5rem;font-weight:800;color:#111827;margin-bottom:20px;">Our Vision</h3>
                         <p style="font-size:1.05rem;line-height:1.85;color:#4b5563;">To be a pioneer in global education
-                            and research,
-                            producing professionals who are technically sound, ethically strong, and socially
-                            responsible.</p>
+                            and research, producing professionals who are technically sound, ethically strong, and
+                            socially responsible.</p>
                     </div>
                     <div
                         style="background:#fff;padding:48px;border-radius:32px;box-shadow:0 1px 3px rgba(0,0,0,0.06);border:1px solid #f1f3f5;">
@@ -804,8 +820,8 @@
                         </div>
                         <h3 style="font-size:1.5rem;font-weight:800;color:#111827;margin-bottom:20px;">Our Mission</h3>
                         <p style="font-size:1.05rem;line-height:1.85;color:#4b5563;">To provide state-of-the-art
-                            infrastructure and a
-                            conducive environment for learning, research, and holistic development of every student.</p>
+                            infrastructure and a conducive environment for learning, research, and holistic development
+                            of every student.</p>
                     </div>
                 </div>
             </div>
@@ -820,24 +836,21 @@
                         Our Campus</h2>
                     <h3 style="font-size:2.5rem;font-weight:900;color:#111827;">Campus Life at DRKVSRIT</h3>
                 </div>
-                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-                    <div
-                        style="border-radius:24px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.1);transition:transform 0.5s;">
-                        <img src="images/about/aboutus-slider1.jpg" alt="DRKVSRIT Campus Building"
+                <div class="campus-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+                    <div style="border-radius:24px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.1);">
+                        <img src="../images/about/aboutus-slider1.jpg" alt="DRKVSRIT Campus Building"
                             style="width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.5s;"
                             onmouseover="this.style.transform='scale(1.05)'"
                             onmouseout="this.style.transform='scale(1)'">
                     </div>
-                    <div
-                        style="border-radius:24px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.1);transition:transform 0.5s;">
-                        <img src="images/about/aboutus-slider2.jpg" alt="College Leadership and Events"
+                    <div style="border-radius:24px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.1);">
+                        <img src="../images/about/aboutus-slider2.jpg" alt="College Leadership and Events"
                             style="width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.5s;"
                             onmouseover="this.style.transform='scale(1.05)'"
                             onmouseout="this.style.transform='scale(1)'">
                     </div>
-                    <div
-                        style="border-radius:24px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.1);transition:transform 0.5s;">
-                        <img src="images/about/aboutus-slider3.jpg" alt="Student Activities and Campus Events"
+                    <div style="border-radius:24px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.1);">
+                        <img src="../images/about/aboutus-slider3.jpg" alt="Student Activities and Campus Events"
                             style="width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.5s;"
                             onmouseover="this.style.transform='scale(1.05)'"
                             onmouseout="this.style.transform='scale(1)'">
@@ -856,13 +869,13 @@
                     <h3 style="font-size:2.5rem;font-weight:900;color:#111827;">The Visionaries Behind KVSRIT</h3>
                 </div>
 
-                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px;">
+                <div class="leadership-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px;">
                     <!-- Chairman -->
                     <div style="text-align:center;">
                         <div style="margin-bottom:32px;position:relative;display:inline-block;">
                             <div
                                 style="width:224px;height:224px;border-radius:32px;overflow:hidden;background:#f3f4f6;display:inline-block;">
-                                <img src="images/management/kvs.jpg" alt="Dr. K.V. Subba Reddy - Chairman"
+                                <img src="../images/management/kvs.jpg" alt="Dr. K.V. Subba Reddy - Chairman"
                                     style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
                                     onmouseover="this.style.transform='scale(1.05)'"
                                     onmouseout="this.style.transform='scale(1)'">
@@ -886,38 +899,14 @@
                             Jewel of India Awardee &amp; Life Time Achievement Gold Medal recipient</p>
                     </div>
 
-                    <!-- Principal -->
-                    <div style="text-align:center;">
-                        <div style="margin-bottom:32px;position:relative;display:inline-block;">
-                            <div
-                                style="width:224px;height:224px;border-radius:32px;overflow:hidden;background:#f3f4f6;display:inline-block;">
-                                <img src="images/management/principal.jpg" alt="Dr. J. Kanna Kumar - Principal"
-                                    style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
-                                    onmouseover="this.style.transform='scale(1.05)'"
-                                    onmouseout="this.style.transform='scale(1)'">
-                            </div>
-                            <div
-                                style="position:absolute;bottom:-16px;right:-16px;width:48px;height:48px;background:#3b5bdb;border-radius:14px;display:flex;align-items:center;justify-content:center;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
-                                </svg>
-                            </div>
-                        </div>
-                        <h4 style="font-size:1.25rem;font-weight:800;color:#111827;">Dr. J. Kanna Kumar</h4>
-                        <p
-                            style="color:#3b5bdb;font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;margin-top:8px;">
-                            Principal</p>
-                    </div>
+
 
                     <!-- Secretary -->
                     <div style="text-align:center;">
                         <div style="margin-bottom:32px;position:relative;display:inline-block;">
                             <div
                                 style="width:224px;height:224px;border-radius:32px;overflow:hidden;background:#f3f4f6;display:inline-block;">
-                                <img src="images/management/kvsm.jpg"
+                                <img src="../images/management/kvsm.jpg"
                                     alt="Smt. Vijaya Lakshmamma - Secretary & Correspondent"
                                     style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
                                     onmouseover="this.style.transform='scale(1.05)'"
@@ -940,6 +929,31 @@
                             style="color:#3b5bdb;font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;margin-top:8px;">
                             Secretary &amp; Correspondent</p>
                     </div>
+                    <!-- Principal -->
+                    <div style="text-align:center;">
+                        <div style="margin-bottom:32px;position:relative;display:inline-block;">
+                            <div
+                                style="width:224px;height:224px;border-radius:32px;overflow:hidden;background:#f3f4f6;display:inline-block;">
+                                <img src="../images/management/principal.jpg" alt="Dr.Subba Reddy Borra - Principal"
+                                    style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                                    onmouseover="this.style.transform='scale(1.05)'"
+                                    onmouseout="this.style.transform='scale(1)'">
+                            </div>
+                            <div
+                                style="position:absolute;bottom:-16px;right:-16px;width:48px;height:48px;background:#3b5bdb;border-radius:14px;display:flex;align-items:center;justify-content:center;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 style="font-size:1.25rem;font-weight:800;color:#111827;">Dr.Subba Reddy Borra</h4>
+                        <p
+                            style="color:#3b5bdb;font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;margin-top:8px;">
+                            Principal</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -957,32 +971,32 @@
                 <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px;">
                     <div
                         style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;">
-                        <img src="images/drkvsrit/AICTE@.png" alt="AICTE Approved"
+                        <img src="../images/drkvsrit/AICTE@.png" alt="AICTE Approved"
                             style="height:60px;width:auto;object-fit:contain;">
                     </div>
                     <div
                         style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;">
-                        <img src="images/drkvsrit/ugc@@@.png" alt="UGC Autonomous"
+                        <img src="../images/drkvsrit/ugc@@@.png" alt="UGC Autonomous"
                             style="height:60px;width:auto;object-fit:contain;">
                     </div>
                     <div
                         style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;">
-                        <img src="images/drkvsrit/Jntua.png" alt="JNTUA Affiliated"
+                        <img src="../images/drkvsrit/Jntua.png" alt="JNTUA Affiliated"
                             style="height:60px;width:auto;object-fit:contain;">
                     </div>
                     <div
                         style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;">
-                        <img src="images/drkvsrit/NAAC.jpg" alt="NAAC A+ Accredited"
+                        <img src="../images/drkvsrit/NAAC.jpg" alt="NAAC A+ Accredited"
                             style="height:60px;width:auto;object-fit:contain;">
                     </div>
                     <div
                         style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;">
-                        <img src="images/drkvsrit/NBA1@.png" alt="NBA Accredited"
+                        <img src="../images/drkvsrit/NBA1@.png" alt="NBA Accredited"
                             style="height:60px;width:auto;object-fit:contain;">
                     </div>
                     <div
                         style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;">
-                        <img src="images/drkvsrit/ISO9001-stamp.png" alt="ISO 9001:2015 Certified"
+                        <img src="../images/drkvsrit/ISO9001-stamp.png" alt="ISO 9001:2015 Certified"
                             style="height:60px;width:auto;object-fit:contain;">
                     </div>
                 </div>
@@ -993,16 +1007,16 @@
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <!-- Scripts -->
-    <script src="assets/js/components.js"></script>
+    <!-- Core Scripts -->
+    <script src="../assets/js/components.js"></script>
 
     <!-- History Slider Script -->
     <script>
         (function () {
             const slides = [
-                { src: 'images/about/aboutus-slider1.jpg', alt: 'DRKVSRIT Campus Building' },
-                { src: 'images/about/aboutus-slider2.jpg', alt: 'DRKVSRIT Leadership Team' },
-                { src: 'images/about/aboutus-slider3.jpg', alt: 'DRKVSRIT Student Activities' }
+                { src: '../images/about/aboutus-slider1.jpg', alt: 'DRKVSRIT Campus Building' },
+                { src: '../images/about/aboutus-slider2.jpg', alt: 'DRKVSRIT Leadership Team' },
+                { src: '../images/about/aboutus-slider3.jpg', alt: 'DRKVSRIT Student Activities' }
             ];
             let currentSlide = 0;
             const img = document.getElementById('historySliderImg');

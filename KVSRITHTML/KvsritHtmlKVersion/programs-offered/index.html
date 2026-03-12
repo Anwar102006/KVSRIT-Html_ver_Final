@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programs Offered | KVSRIT</title>
+    <meta name="description"
+        content="Explore the programs offered at Dr. K.V. Subba Reddy Institute of Technology - B.Tech, M.Tech, MBA, and MCA courses with intake details." />
+    <link rel="stylesheet" href="../css/core.css" />
+    <link rel="stylesheet" href="../css/navbar-enhanced.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+
+        .page-header h1,
+        .page-header p {
+            text-align: center;
+        }
+
+        .page-header .max-w-2xl {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-header nav {
+            justify-content: center;
+        }
+
+        /* ===== PROGRAM TABLES ===== */
+        .programs-section {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .program-category {
+            margin-bottom: 3rem;
+        }
+
+        .program-category-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: #ffffff;
+            padding: 1rem 1.5rem;
+            border-radius: 16px 16px 0 0;
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .program-category-header svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .program-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 2px solid #e5e7eb;
+            border-top: none;
+            border-radius: 0 0 16px 16px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .program-table thead th {
+            background: #f0f4ff;
+            color: #1e3a8a;
+            font-weight: 700;
+            font-size: 0.875rem;
+            padding: 1rem 1.25rem;
+            text-align: left;
+            border-bottom: 2px solid #dbeafe;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .program-table tbody td {
+            padding: 0.875rem 1.25rem;
+            font-size: 0.938rem;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: background 0.2s ease;
+        }
+
+        .program-table tbody tr:hover td {
+            background: #f8faff;
+        }
+
+        .program-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .program-table .total-row td {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            font-weight: 800;
+            color: #1e3a8a;
+            font-size: 1rem;
+            border-top: 2px solid #93c5fd;
+        }
+
+        .intake-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.875rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            min-width: 48px;
+        }
+
+        .year-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #f3f4f6;
+            color: #6b7280;
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+        }
+
+        /* Summary Cards */
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .summary-card {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .summary-card:nth-child(1)::before {
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+        }
+
+        .summary-card:nth-child(2)::before {
+            background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+        }
+
+        .summary-card:nth-child(3)::before {
+            background: linear-gradient(90deg, #f59e0b, #d97706);
+        }
+
+        .summary-card:nth-child(4)::before {
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+
+        .summary-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+            border-color: transparent;
+        }
+
+        .summary-card:nth-child(1):hover {
+            border-color: #3b82f6;
+        }
+
+        .summary-card:nth-child(2):hover {
+            border-color: #8b5cf6;
+        }
+
+        .summary-card:nth-child(3):hover {
+            border-color: #f59e0b;
+        }
+
+        .summary-card:nth-child(4):hover {
+            border-color: #10b981;
+        }
+
+        .summary-card .card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .summary-card:nth-child(1) .card-icon {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        .summary-card:nth-child(2) .card-icon {
+            background: #f5f3ff;
+            color: #7c3aed;
+        }
+
+        .summary-card:nth-child(3) .card-icon {
+            background: #fffbeb;
+            color: #d97706;
+        }
+
+        .summary-card:nth-child(4) .card-icon {
+            background: #ecfdf5;
+            color: #059669;
+        }
+
+        .summary-card .card-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .summary-card:nth-child(1) .card-number {
+            color: #2563eb;
+        }
+
+        .summary-card:nth-child(2) .card-number {
+            color: #7c3aed;
+        }
+
+        .summary-card:nth-child(3) .card-number {
+            color: #d97706;
+        }
+
+        .summary-card:nth-child(4) .card-number {
+            color: #059669;
+        }
+
+        .summary-card .card-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .summary-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .summary-cards {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .summary-card {
+                padding: 1.25rem;
+            }
+
+            .summary-card .card-number {
+                font-size: 2rem;
+            }
+
+            .program-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .program-category-header {
+                font-size: 1rem;
+                padding: 0.875rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .summary-cards {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
+            }
+        }
+
+        /* ===== SMOOTH ANIMATIONS ===== */
+        * {
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <nav class="flex items-center gap-2 text-blue-300 text-xs font-bold uppercase tracking-widest mb-4">
+                    <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-3 h-3">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                    <span class="text-white">Programs Offered</span>
+                </nav>
+                <h1 class="text-4xl font-bold mb-4">Programs Offered</h1>
+                <p class="text-blue-100 text-lg max-w-2xl leading-relaxed">
+                    Discover our wide range of undergraduate, postgraduate, and professional programs designed to shape
+                    future leaders in technology and business.
+                </p>
+            </div>
+        </section>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+            <!-- Summary Cards -->
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6">
+                            <rect width="16" height="16" x="4" y="4" rx="2" />
+                            <rect width="6" height="6" x="9" y="9" rx="1" />
+                            <path d="M15 2v2" />
+                            <path d="M15 20v2" />
+                            <path d="M2 15h2" />
+                            <path d="M2 9h2" />
+                            <path d="M20 15h2" />
+                            <path d="M20 9h2" />
+                            <path d="M9 2v2" />
+                            <path d="M9 20v2" />
+                        </svg>
+                    </div>
+                    <div class="card-number">1080</div>
+                    <div class="card-label">B.Tech Intake</div>
+                </div>
+                <div class="summary-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 10 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <div class="card-number">54</div>
+                    <div class="card-label">M.Tech Intake</div>
+                </div>
+                <div class="summary-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6">
+                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                    </div>
+                    <div class="card-number">180</div>
+                    <div class="card-label">MBA Intake</div>
+                </div>
+                <div class="summary-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+                            <path d="M3 12A9 3 0 0 0 21 12" />
+                        </svg>
+                    </div>
+                    <div class="card-number">120</div>
+                    <div class="card-label">MCA Intake</div>
+                </div>
+            </div>
+
+            <div class="programs-section">
+
+                <!-- B.Tech Programs -->
+                <div class="program-category">
+                    <div class="program-category-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="16" height="16" x="4" y="4" rx="2" />
+                            <rect width="6" height="6" x="9" y="9" rx="1" />
+                            <path d="M15 2v2" />
+                            <path d="M15 20v2" />
+                            <path d="M2 15h2" />
+                            <path d="M2 9h2" />
+                            <path d="M20 15h2" />
+                            <path d="M20 9h2" />
+                            <path d="M9 2v2" />
+                            <path d="M9 20v2" />
+                        </svg>
+                        UNDER GRADUATE (B.TECH) – FULL TIME
+                    </div>
+                    <table class="program-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 8%;">S.No</th>
+                                <th>Programme</th>
+                                <th style="width: 18%;">Year Started</th>
+                                <th style="width: 18%;">Sanctioned Intake</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>B.Tech – Computer Science & Engineering (CSE)</strong></td>
+                                <td><span class="year-badge">2007-08</span></td>
+                                <td><span class="intake-badge">360</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>B.Tech – Electronics & Communication Engineering (ECE)</strong></td>
+                                <td><span class="year-badge">2007-08</span></td>
+                                <td><span class="intake-badge">240</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>B.Tech – Civil Engineering</strong></td>
+                                <td><span class="year-badge">2007-08</span></td>
+                                <td><span class="intake-badge">60</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>B.Tech – Electrical & Electronics Engineering (EEE)</strong></td>
+                                <td><span class="year-badge">2007-08</span></td>
+                                <td><span class="intake-badge">60</span></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>B.Tech – Mechanical Engineering</strong></td>
+                                <td><span class="year-badge">2007-08</span></td>
+                                <td><span class="intake-badge">60</span></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>B.Tech – CSE (Artificial Intelligence & Machine Learning)</strong></td>
+                                <td><span class="year-badge">—</span></td>
+                                <td><span class="intake-badge">120</span></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>B.Tech – CSE (Data Science)</strong></td>
+                                <td><span class="year-badge">—</span></td>
+                                <td><span class="intake-badge">60</span></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><strong>B.Tech – CSE (Artificial Intelligence)</strong></td>
+                                <td><span class="year-badge">—</span></td>
+                                <td><span class="intake-badge">120</span></td>
+                            </tr>
+                            <tr class="total-row">
+                                <td colspan="3"><strong>Total B.Tech Intake</strong></td>
+                                <td><strong>1080</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- M.Tech Programs -->
+                <div class="program-category">
+                    <div class="program-category-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 10 3 12 0v-5" />
+                        </svg>
+                        POST GRADUATE (M.TECH) – FULL TIME
+                    </div>
+                    <table class="program-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 8%;">S.No</th>
+                                <th>Programme</th>
+                                <th style="width: 18%;">Year Started</th>
+                                <th style="width: 18%;">Sanctioned Intake</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>M.Tech – VLSI</strong></td>
+                                <td><span class="year-badge">2014-15</span></td>
+                                <td><span class="intake-badge">18</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>M.Tech – Computer Science & Engineering</strong></td>
+                                <td><span class="year-badge">2011-12</span></td>
+                                <td><span class="intake-badge">18</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>M.Tech – Structural Engineering</strong></td>
+                                <td><span class="year-badge">2014-15</span></td>
+                                <td><span class="intake-badge">18</span></td>
+                            </tr>
+                            <tr class="total-row">
+                                <td colspan="3"><strong>Total M.Tech Intake</strong></td>
+                                <td><strong>54</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- MBA Programs -->
+                <div class="program-category">
+                    <div class="program-category-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                        MBA (MASTER OF BUSINESS ADMINISTRATION)
+                    </div>
+                    <table class="program-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 8%;">S.No</th>
+                                <th>Specialization</th>
+                                <th style="width: 18%;">Year Started</th>
+                                <th style="width: 18%;">Sanctioned Intake</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>MBA – Human Resource Management</strong></td>
+                                <td><span class="year-badge">2009-10</span></td>
+                                <td rowspan="3" style="vertical-align: middle;"><span class="intake-badge">180</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>MBA – Finance</strong></td>
+                                <td><span class="year-badge">—</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>MBA – Marketing</strong></td>
+                                <td><span class="year-badge">—</span></td>
+                            </tr>
+                            <tr class="total-row">
+                                <td colspan="3"><strong>Total MBA Intake</strong></td>
+                                <td><strong>180</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- MCA Program -->
+                <div class="program-category">
+                    <div class="program-category-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+                            <path d="M3 12A9 3 0 0 0 21 12" />
+                        </svg>
+                        MCA (MASTER OF COMPUTER APPLICATIONS)
+                    </div>
+                    <table class="program-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 8%;">S.No</th>
+                                <th>Programme</th>
+                                <th style="width: 18%;">Year Started</th>
+                                <th style="width: 18%;">Sanctioned Intake</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>MCA – Master of Computer Applications</strong></td>
+                                <td><span class="year-badge">2023-24</span></td>
+                                <td><span class="intake-badge">120</span></td>
+                            </tr>
+                            <tr class="total-row">
+                                <td colspan="3"><strong>Total MCA Intake</strong></td>
+                                <td><strong>120</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/components.js"></script>
+</body>
+
+</html>

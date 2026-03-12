@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scholarships | KVSRIT</title>
+    <meta name="description"
+        content="Scholarship details at Dr. K.V. Subba Reddy Institute of Technology - Complete tuition fee waiver for B.Tech EAMCET students, fee reimbursement, GATE stipends and more." />
+    <link rel="stylesheet" href="../css/core.css" />
+    <link rel="stylesheet" href="../css/navbar-enhanced.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+
+        .page-header h1,
+        .page-header p {
+            text-align: center;
+        }
+
+        .page-header .max-w-2xl {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-header nav {
+            justify-content: center;
+        }
+
+        /* ===== SCHOLARSHIP CARDS ===== */
+        .scholarship-section {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .scholarship-card {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 24px;
+            padding: 0;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .scholarship-card:hover {
+            border-color: #93c5fd;
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .scholarship-card-header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #ffffff;
+        }
+
+        .scholarship-card-header.btech-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .scholarship-card-header.diploma-header {
+            background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
+        }
+
+        .scholarship-card-header.mtech-header {
+            background: linear-gradient(135deg, #5b21b6 0%, #8b5cf6 100%);
+        }
+
+        .scholarship-card-header svg {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        .scholarship-card-header h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .scholarship-card-body {
+            padding: 2rem;
+        }
+
+        .scholarship-card-body p {
+            font-size: 0.975rem;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .scholarship-card-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+            border: 2px solid #fcd34d;
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .highlight-box svg {
+            width: 24px;
+            height: 24px;
+            color: #d97706;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .highlight-box p {
+            font-size: 0.938rem;
+            color: #92400e;
+            font-weight: 600;
+            line-height: 1.6;
+            margin: 0 !important;
+        }
+
+        /* Feature Banner */
+        .feature-banner {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 2px solid #93c5fd;
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            animation: pulse-slow 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse-slow {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+        }
+
+        .feature-banner .banner-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-banner .banner-icon svg {
+            width: 36px;
+            height: 36px;
+            color: #ffffff;
+        }
+
+        .feature-banner h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-banner p {
+            font-size: 1.1rem;
+            color: #3b82f6;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-section h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+
+        .cta-section p {
+            font-size: 0.975rem;
+            color: #9ca3af;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.938rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .scholarship-card-header {
+                padding: 1.25rem 1.5rem;
+            }
+
+            .scholarship-card-header h3 {
+                font-size: 1.1rem;
+            }
+
+            .scholarship-card-body {
+                padding: 1.5rem;
+            }
+
+            .feature-banner {
+                padding: 2rem 1.5rem;
+            }
+
+            .feature-banner h2 {
+                font-size: 1.4rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        /* ===== SMOOTH ANIMATIONS ===== */
+        * {
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <nav class="flex items-center gap-2 text-blue-300 text-xs font-bold uppercase tracking-widest mb-4">
+                    <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-3 h-3">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                    <span class="text-white">Scholarships</span>
+                </nav>
+                <h1 class="text-4xl font-bold mb-4">Scholarships</h1>
+                <p class="text-blue-100 text-lg max-w-2xl leading-relaxed">
+                    Supporting students through comprehensive scholarship programs and fee waivers at Dr. K.V. Subba
+                    Reddy Institute of Technology.
+                </p>
+            </div>
+        </section>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+            <!-- Feature Banner -->
+            <div class="feature-banner">
+                <div class="banner-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="6" />
+                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                    </svg>
+                </div>
+                <h2>Complete Tuition Fee Waiver</h2>
+                <p>
+                    The college offers <strong>COMPLETE TUITION FEE WAIVER FOR ALL FOUR YEARS</strong> of the B.Tech
+                    course to students who join through EAMCET.
+                </p>
+            </div>
+
+            <div class="scholarship-section">
+
+                <!-- B.Tech 4-Year Scholarship -->
+                <div class="scholarship-card">
+                    <div class="scholarship-card-header btech-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="16" height="16" x="4" y="4" rx="2" />
+                            <rect width="6" height="6" x="9" y="9" rx="1" />
+                            <path d="M15 2v2" />
+                            <path d="M15 20v2" />
+                            <path d="M2 15h2" />
+                            <path d="M2 9h2" />
+                            <path d="M20 15h2" />
+                            <path d="M20 9h2" />
+                            <path d="M9 2v2" />
+                            <path d="M9 20v2" />
+                        </svg>
+                        <h3>B.Tech Programmes (Four Year Courses)</h3>
+                    </div>
+                    <div class="scholarship-card-body">
+                        <p>
+                            The college offers <strong>COMPLETE TUITION FEE WAIVER FOR ALL THE FOUR YEARS</strong> of
+                            the B.Tech course to students who join this college through <strong>EAMCET</strong>.
+                        </p>
+                        <p>
+                            The Government of Andhra Pradesh offers <strong>tuition fee reimbursement</strong> and
+                            <strong>scholarships</strong> to eligible students as per government norms and eligibility
+                            criteria.
+                        </p>
+                        <div class="highlight-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                            </svg>
+                            <p>100% Tuition Fee Waiver for EAMCET students for all 4 years!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B.Tech 3-Year (Diploma) Scholarship -->
+                <div class="scholarship-card">
+                    <div class="scholarship-card-header diploma-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                        <h3>B.Tech Programmes (Three Year – Diploma Holders)</h3>
+                    </div>
+                    <div class="scholarship-card-body">
+                        <p>
+                            The Government of Andhra Pradesh offers <strong>Tuition Fee Reimbursement</strong> and
+                            <strong>Scholarships</strong> to eligible students who join B.Tech through lateral entry as
+                            diploma holders.
+                        </p>
+                        <p>
+                            Students admitted through <strong>ECET (FDH)</strong> are eligible for government
+                            scholarships and fee reimbursement schemes based on their eligibility criteria.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- M.Tech Scholarship -->
+                <div class="scholarship-card">
+                    <div class="scholarship-card-header mtech-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 10 3 12 0v-5" />
+                        </svg>
+                        <h3>M.Tech Programmes</h3>
+                    </div>
+                    <div class="scholarship-card-body">
+                        <p>
+                            <strong>Stipend & Tuition Fee Reimbursement & Scholarships:</strong>
+                        </p>
+                        <p>
+                            Students who are admitted on the basis of <strong>GATE rank</strong> are eligible for
+                            <strong>stipend from AICTE</strong>.
+                        </p>
+                        <p>
+                            Students who are admitted based on <strong>PGECET rank</strong> are eligible for
+                            <strong>Tuition Fee Reimbursement</strong> from the Government of Andhra Pradesh if they
+                            satisfy the eligibility criteria.
+                        </p>
+                        <div class="highlight-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                            </svg>
+                            <p>GATE qualified students receive AICTE stipend. PGECET students get government fee
+                                reimbursement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="cta-section">
+                    <h3>Need More Information?</h3>
+                    <p>Contact our admissions office for detailed information about scholarships and fee reimbursement
+                        eligibility.</p>
+                    <a href="../contact.html" class="cta-button">
+                        Contact Admissions
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/components.js"></script>
+</body>
+
+</html>

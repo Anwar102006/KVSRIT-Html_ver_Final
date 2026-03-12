@@ -54,11 +54,11 @@ const NAVBAR_HTML = `
           <div role="menu"
             class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100]">
             <div class="py-2">
-              <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">About Us</a>
+              <a href="about/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">About Us</a>
               <a href="vision-mission-quality-policy/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Vision & Mission</a>
               <a href="affiliation-and-accreditation/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Affiliation and Accreditation</a>
-              <a href="about.html#management" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Management</a>
-              <a href="about.html#principal" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Principal</a>
+              <a href="about/index.html#management" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Management</a>
+              <a href="about/index.html#principal" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Principal</a>
               <a href="administration/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Administration</a>
               <a href="leadership/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Governing Body</a>
               <a href="academic-council/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Academic Council</a>
@@ -78,9 +78,9 @@ const NAVBAR_HTML = `
             <div class="py-2">
               <a href="admissions-procedure/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Admissions Procedure</a>
               <a href="criteria-for-admission/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Criteria for Admission</a>
-              <a href="admissions.html#programs" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Programs Offered</a>
-              <a href="admissions.html#fee" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Fee Structure</a>
-              <a href="admissions.html#scholarships" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Scholarships</a>
+              <a href="programs-offered/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Programs Offered</a>
+              <a href="fee-structure/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Fee Structure</a>
+              <a href="scholarships/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Scholarships</a>
             </div>
           </div>
         </div>
@@ -236,7 +236,7 @@ const NAVBAR_HTML = `
   <div id="mobile-menu" class="xl:hidden hidden bg-gray-50 border-t border-gray-100 pb-6 px-4">
     <div class="py-4 flex flex-col space-y-2">
       <a href="index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Home</a>
-      <a href="about.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">About Us</a>
+      <a href="about/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">About Us</a>
       <a href="admissions.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Admissions</a>
       <a href="departments/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Departments</a>
       <a href="placements/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Placements</a>
@@ -368,12 +368,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const isAcademicCouncil = /\/academic-council\//.test(normalizedPath);
       const isAdmissionsProcedure = /\/admissions-procedure\//.test(normalizedPath);
       const isCriteriaForAdmission = /\/criteria-for-admission\//.test(normalizedPath);
+      const isProgramsOffered = /\/programs-offered\//.test(normalizedPath);
+      const isFeeStructure = /\/fee-structure\//.test(normalizedPath);
+      const isScholarships = /\/scholarships\//.test(normalizedPath);
 
       // Multi-level nesting check (e.g. departments/cse/index.html)
       const deptMatch = normalizedPath.match(/\/departments\/([^\/]+)\//);
       if (deptMatch) return '../../';
 
-      if (isDept || isAbout || isAcademics || isCampus || isPlacements || isStudentPortal || isCourses || isVisionMission || isAffiliation || isAdministration || isAcademicCouncil || isAdmissionsProcedure || isCriteriaForAdmission) {
+      if (isDept || isAbout || isAcademics || isCampus || isPlacements || isStudentPortal || isCourses || isVisionMission || isAffiliation || isAdministration || isAcademicCouncil || isAdmissionsProcedure || isCriteriaForAdmission || isProgramsOffered || isFeeStructure || isScholarships) {
         return '../';
       }
       return './';

@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fee Structure | KVSRIT</title>
+    <meta name="description"
+        content="Fee structure details for B.Tech, M.Tech, MBA, and MCA programs at Dr. K.V. Subba Reddy Institute of Technology including Convenor and Management quota fees." />
+    <link rel="stylesheet" href="../css/core.css" />
+    <link rel="stylesheet" href="../css/navbar-enhanced.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+
+        .page-header h1,
+        .page-header p {
+            text-align: center;
+        }
+
+        .page-header .max-w-2xl {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-header nav {
+            justify-content: center;
+        }
+
+        /* ===== FEE TABLES ===== */
+        .fee-section {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .fee-category {
+            margin-bottom: 3rem;
+        }
+
+        .fee-category-header {
+            padding: 1.25rem 1.5rem;
+            border-radius: 16px 16px 0 0;
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #ffffff;
+        }
+
+        .fee-category-header svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .fee-header-btech {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+
+        .fee-header-mgmt {
+            background: linear-gradient(135deg, #92400e 0%, #d97706 100%);
+        }
+
+        .fee-header-ecet {
+            background: linear-gradient(135deg, #065f46 0%, #059669 100%);
+        }
+
+        .fee-header-mtech {
+            background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+        }
+
+        .fee-header-mba {
+            background: linear-gradient(135deg, #9f1239 0%, #e11d48 100%);
+        }
+
+        .fee-header-other {
+            background: linear-gradient(135deg, #334155 0%, #64748b 100%);
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 2px solid #e5e7eb;
+            border-top: none;
+            border-radius: 0 0 16px 16px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .fee-table thead th {
+            background: #f8fafc;
+            color: #1e293b;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 1rem 1.25rem;
+            text-align: left;
+            border-bottom: 2px solid #e2e8f0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .fee-table tbody td {
+            padding: 0.875rem 1.25rem;
+            font-size: 0.938rem;
+            color: #374151;
+            border-bottom: 1px solid #f3f4f6;
+            transition: background 0.2s ease;
+        }
+
+        .fee-table tbody tr:hover td {
+            background: #f8faff;
+        }
+
+        .fee-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .fee-amount {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 0.938rem;
+            color: #1e3a8a;
+        }
+
+        .fee-amount-highlight {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 0.3rem 0.75rem;
+            border-radius: 8px;
+            font-weight: 800;
+            color: #1e40af;
+        }
+
+        /* Info Notice */
+        .info-notice {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 2px solid #93c5fd;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .info-notice svg {
+            width: 24px;
+            height: 24px;
+            color: #2563eb;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .info-notice p {
+            font-size: 0.938rem;
+            color: #1e40af;
+            font-weight: 500;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .fee-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .fee-category-header {
+                font-size: 0.95rem;
+                padding: 0.875rem 1rem;
+            }
+
+            .info-notice {
+                flex-direction: column;
+                padding: 1.25rem;
+            }
+        }
+
+        /* ===== SMOOTH ANIMATIONS ===== */
+        * {
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <nav class="flex items-center gap-2 text-blue-300 text-xs font-bold uppercase tracking-widest mb-4">
+                    <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-3 h-3">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                    <span class="text-white">Fee Structure</span>
+                </nav>
+                <h1 class="text-4xl font-bold mb-4">Fee Structure</h1>
+                <p class="text-blue-100 text-lg max-w-2xl leading-relaxed">
+                    Transparent and affordable fee structure for all programs at Dr. K.V. Subba Reddy Institute of
+                    Technology.
+                </p>
+            </div>
+        </section>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+            <!-- Information Notice -->
+            <div class="info-notice">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 16v-4" />
+                    <path d="M12 8h.01" />
+                </svg>
+                <p>
+                    Fee details are as per the norms fixed by the Government of Andhra Pradesh (AFRC).
+                    The University Fee is payable per annum. Fees are subject to revision as per government orders.
+                    For any clarifications, please contact the Admissions Office.
+                </p>
+            </div>
+
+            <div class="fee-section">
+
+                <!-- B.Tech EAMCET Convenor -->
+                <div class="fee-category">
+                    <div class="fee-category-header fee-header-btech">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 10 3 12 0v-5" />
+                        </svg>
+                        B.TECH – EAMCET CONVENOR QUOTA
+                    </div>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>Branch</th>
+                                <th>Tuition Fee / PA</th>
+                                <th>University Fee / PA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B.Tech – CSE (AI & ML)</td>
+                                <td><span class="fee-amount">₹ 45,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – CSE (Data Science)</td>
+                                <td><span class="fee-amount">₹ 45,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – CSE (AI)</td>
+                                <td><span class="fee-amount">₹ 45,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – CSE</td>
+                                <td><span class="fee-amount">₹ 45,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – ECE</td>
+                                <td><span class="fee-amount">₹ 45,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – EEE</td>
+                                <td><span class="fee-amount">₹ 45,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – Mechanical Engineering</td>
+                                <td><span class="fee-amount">₹ 45,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – Civil Engineering</td>
+                                <td><span class="fee-amount">₹ 45,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- B.Tech Management Quota -->
+                <div class="fee-category">
+                    <div class="fee-category-header fee-header-mgmt">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        B.TECH – MANAGEMENT QUOTA SEATS
+                    </div>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>Branch</th>
+                                <th>Tuition Fee / PA</th>
+                                <th>University Fee / PA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B.Tech – CSE</td>
+                                <td><span class="fee-amount-highlight">₹ 1,20,000/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – CSE (AI & ML)</td>
+                                <td><span class="fee-amount-highlight">₹ 1,20,000/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – CSE (Data Science)</td>
+                                <td><span class="fee-amount-highlight">₹ 1,00,000/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – CSE (AI)</td>
+                                <td><span class="fee-amount-highlight">₹ 1,00,000/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – ECE</td>
+                                <td><span class="fee-amount-highlight">₹ 80,000/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – EEE</td>
+                                <td><span class="fee-amount">₹ 50,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – Mechanical Engineering</td>
+                                <td><span class="fee-amount">₹ 50,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>B.Tech – Civil Engineering</td>
+                                <td><span class="fee-amount">₹ 50,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- E-CET Lateral Entry -->
+                <div class="fee-category">
+                    <div class="fee-category-header fee-header-ecet">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                        E-CET CONVENOR / MANAGEMENT (B.TECH LATERAL ENTRY)
+                    </div>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>Branch</th>
+                                <th>Tuition Fee / PA</th>
+                                <th>University Fee / PA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B.Tech – All Branches (Lateral Entry)</td>
+                                <td><span class="fee-amount">₹ 45,700/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- M.Tech -->
+                <div class="fee-category">
+                    <div class="fee-category-header fee-header-mtech">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 10 3 12 0v-5" />
+                        </svg>
+                        M.TECH – PG CET CONVENOR / MANAGEMENT QUOTA
+                    </div>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>Branch</th>
+                                <th>Tuition Fee / PA</th>
+                                <th>University Fee / PA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>M.Tech – VLSI</td>
+                                <td><span class="fee-amount">₹ 50,000/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>M.Tech – CSE</td>
+                                <td><span class="fee-amount">₹ 50,000/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>M.Tech – Structural Engineering</td>
+                                <td><span class="fee-amount">₹ 50,000/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- MBA / MCA -->
+                <div class="fee-category">
+                    <div class="fee-category-header fee-header-mba">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                        MBA & MCA – I-CET CONVENOR / MANAGEMENT QUOTA
+                    </div>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>Programme</th>
+                                <th>Tuition Fee / PA</th>
+                                <th>University Fee / PA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MBA</td>
+                                <td><span class="fee-amount">₹ 35,000/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>MCA</td>
+                                <td><span class="fee-amount">₹ 35,000/-</span></td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Other Fee Details -->
+                <div class="fee-category">
+                    <div class="fee-category-header fee-header-other">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4" />
+                            <path d="M12 8h.01" />
+                        </svg>
+                        OTHER FEE DETAILS
+                    </div>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Fee / PA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>University Registration Fee</td>
+                                <td><span class="fee-amount">₹ 2,500/-</span></td>
+                            </tr>
+                            <tr>
+                                <td>Library Fee</td>
+                                <td><span class="fee-amount">NIL</span></td>
+                            </tr>
+                            <tr>
+                                <td>Internet / Wi-Fi Fee</td>
+                                <td><span class="fee-amount">NIL</span></td>
+                            </tr>
+                            <tr>
+                                <td>Laboratory Fee</td>
+                                <td><span class="fee-amount">NIL</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sports Fee</td>
+                                <td><span class="fee-amount">NIL</span></td>
+                            </tr>
+                            <tr>
+                                <td>Development Fee</td>
+                                <td><span class="fee-amount">NIL</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/components.js"></script>
+</body>
+
+</html>
