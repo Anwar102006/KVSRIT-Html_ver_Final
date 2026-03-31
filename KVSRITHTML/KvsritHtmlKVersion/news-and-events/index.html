@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News & Events | KVSRIT</title>
-    <meta name="description" content="Stay updated with the latest news, announcements, and upcoming events at KVSRIT.">
+    <meta name="description"
+        content="Latest placement news, events, and campus activities at Dr. K.V. Subba Reddy Institute of Technology.">
     <link rel="stylesheet" href="../css/core.css">
 
     <!-- Navbar Enhanced CSS (REQUIRED for navbar styling) -->
@@ -25,15 +26,209 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        .news-card {
-            transition: all 0.3s ease;
+        /* ========= News & Events Page Styles ========= */
+        .ne-page-section {
+            padding: 50px 0 60px;
         }
 
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        .ne-page-section .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .ne-dept-heading {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 40px;
+        }
+
+        /* Seminar Block */
+        .ne-seminar-block {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .ne-seminar-block h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .ne-seminar-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .ne-seminar-grid img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Event Cards */
+        .ne-event-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .ne-event-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .ne-event-card-inner {
+            display: flex;
+            gap: 0;
+        }
+
+        .ne-event-logo {
+            flex: 0 0 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: #f8fafc;
+            border-right: 1px solid #e5e7eb;
+        }
+
+        .ne-event-logo .logo-placeholder {
+            width: 140px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .ne-event-details {
+            flex: 1;
+            padding: 24px 28px;
+        }
+
+        .ne-event-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .ne-event-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 10px;
+        }
+
+        .ne-event-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        .ne-event-meta-item svg {
+            flex-shrink: 0;
+            color: #6b7280;
+        }
+
+        .ne-event-info {
+            font-size: 0.95rem;
+            color: #374151;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .ne-event-info strong {
+            color: #059669;
+        }
+
+        .ne-event-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #1e40af;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 8px;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            transition: all 0.2s;
+        }
+
+        .ne-event-link:hover {
+            background: #dbeafe;
+            color: #1e3a8a;
+        }
+
+        /* Package badge */
+        .ne-package-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-left: 6px;
+        }
+
+        /* Students count badge */
+        .ne-students-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .ne-event-card-inner {
+                flex-direction: column;
+            }
+
+            .ne-event-logo {
+                flex: none;
+                border-right: none;
+                border-bottom: 1px solid #e5e7eb;
+                padding: 16px;
+            }
+
+            .ne-event-details {
+                padding: 18px 20px;
+            }
+
+            .ne-seminar-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ne-dept-heading {
+                font-size: 1.3rem;
+            }
         }
     </style>
+
 </head>
 
 <body class="bg-gray-50 text-gray-900">
@@ -44,227 +239,262 @@
     <main>
         <!-- Hero Section -->
         <div class="relative text-white py-24 overflow-hidden"
-            style="background: linear-gradient(to bottom right, #db2777, #7c3aed);">
+            style="background: linear-gradient(to bottom right, #1e3a8a, #7c3aed, #312e81);">
             <div class="absolute inset-0 opacity-20">
-                <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-yellow-400 blur-3xl opacity-20"></div>
-                <div class="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-pink-500 blur-3xl opacity-20"></div>
+                <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-blue-400 blur-3xl opacity-20"></div>
+                <div class="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-purple-500 blur-3xl opacity-20"></div>
             </div>
             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">News & Events</h1>
-                <p class="text-xl text-pink-100 max-w-3xl mx-auto">
-                    The latest happenings, announcements, and campus buzz.
+                <div
+                    style="display:inline-flex; align-items:center; justify-content:center; width:64px; height:64px; background:rgba(255,255,255,0.1); backdrop-filter:blur(10px); border-radius:16px; margin-bottom:20px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
+                        <path d="M18 14h-8" />
+                        <path d="M15 18h-5" />
+                        <path d="M10 6h8v4h-8V6Z" />
+                    </svg>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">News & Events</h1>
+                <p class="text-xl text-blue-200 max-w-3xl mx-auto">
+                    Department of Training & Placement Cell — Latest placement drives, seminars, and campus activities.
                 </p>
             </div>
         </div>
 
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- News Filter (Optional) -->
-                <!-- <div class="flex justify-center gap-4 mb-12">
-                    <button class="px-4 py-2 bg-pink-600 text-white rounded-full font-medium shadow-md">All</button>
-                    <button class="px-4 py-2 bg-white text-gray-600 hover:bg-gray-100 rounded-full font-medium border border-gray-200">Academic</button>
-                    <button class="px-4 py-2 bg-white text-gray-600 hover:bg-gray-100 rounded-full font-medium border border-gray-200">Cultural</button>
-                    <button class="px-4 py-2 bg-white text-gray-600 hover:bg-gray-100 rounded-full font-medium border border-gray-200">Sports</button>
-                </div> -->
+        <!-- Main Content -->
+        <section class="ne-page-section" style="background: #f8fafc;">
+            <div class="container">
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- News Item 1 -->
-                    <article
-                        class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 news-card flex flex-col h-full">
-                        <div class="h-48 bg-gray-200 relative overflow-hidden">
-                            <img src="../images/drkvsrit/EVENT1.png"
-                                alt="Graduation Day"
-                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                            <div
-                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-pink-600 uppercase tracking-wider">
-                                Academic
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <div class="text-sm text-gray-500 mb-2 font-medium">October 15, 2023</div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-pink-600 transition-colors">
-                                <a href="../coming-soon.html">Graduation Day Ceremony Announced</a>
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                                The upcoming graduation ceremony for the batch of 2019-2023 is scheduled for November
-                                10th. Chief Guest to be announced soon.
-                            </p>
-                            <a href="../coming-soon.html"
-                                class="mt-auto text-pink-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                                Read More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
+                <h2 class="ne-dept-heading">Department of Training & Placement Cell</h2>
 
-                    <!-- News Item 2 -->
-                    <article
-                        class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 news-card flex flex-col h-full">
-                        <div class="h-48 bg-gray-200 relative overflow-hidden">
-                            <img src="../images/drkvsrit/FRESHMAN (3).png"
-                                alt="Tech Fest"
-                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                            <div
-                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-purple-600 uppercase tracking-wider">
-                                Events
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <div class="text-sm text-gray-500 mb-2 font-medium">September 22, 2023</div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-purple-600 transition-colors">
-                                <a href="../coming-soon.html">Techno-Vision 2023: Hackathon Dates</a>
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                                Registrations for the annual 24-hour hackathon are now open. Amazing prizes and
-                                internship opportunities up for grabs!
-                            </p>
-                            <a href="../coming-soon.html"
-                                class="mt-auto text-purple-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                                Read More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- News Item 3 -->
-                    <article
-                        class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 news-card flex flex-col h-full">
-                        <div class="h-48 bg-gray-200 relative overflow-hidden">
-                            <img src="../images/drkvsrit/1.png"
-                                alt="Guest Lecture"
-                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                            <div
-                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-indigo-600 uppercase tracking-wider">
-                                Guest Lecture
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <div class="text-sm text-gray-500 mb-2 font-medium">September 5, 2023</div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-indigo-600 transition-colors">
-                                <a href="../coming-soon.html">Expert Talk on AI & ML</a>
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                                Dr. Ramesh from IIT Hyderabad will be delivering a guest lecture on the future of
-                                Artificial Intelligence this Friday.
-                            </p>
-                            <a href="../coming-soon.html"
-                                class="mt-auto text-indigo-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                                Read More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- News Item 4 -->
-                    <article
-                        class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 news-card flex flex-col h-full">
-                        <div class="h-48 bg-gray-200 relative overflow-hidden">
-                            <img src="../images/drkvsrit/EVENT1.png"
-                                alt="Sports Meet"
-                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                            <div
-                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-emerald-600 uppercase tracking-wider">
-                                Sports
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <div class="text-sm text-gray-500 mb-2 font-medium">August 20, 2023</div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-emerald-600 transition-colors">
-                                <a href="../coming-soon.html">Inter-College Sports Meet Results</a>
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                                KVSRIT students bring home the trophy in Cricket and Badminton at the state-level
-                                inter-college tournament.
-                            </p>
-                            <a href="../coming-soon.html"
-                                class="mt-auto text-emerald-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                                Read More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- News Item 5 -->
-                    <article
-                        class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 news-card flex flex-col h-full">
-                        <div class="h-48 bg-gray-200 relative overflow-hidden">
-                            <img src="../images/drkvsrit/FRESHMAN (3).png"
-                                alt="Workshop"
-                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                            <div
-                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-orange-600 uppercase tracking-wider">
-                                Workshop
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <div class="text-sm text-gray-500 mb-2 font-medium">August 10, 2023</div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-orange-600 transition-colors">
-                                <a href="../coming-soon.html">IoT Workshop for Beginners</a>
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                                A 2-day hands-on workshop on Internet of Things (IoT) using Arduino and Raspberry Pi.
-                                Open to all branches.
-                            </p>
-                            <a href="../coming-soon.html"
-                                class="mt-auto text-orange-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                                Read More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- News Item 6 -->
-                    <article
-                        class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 news-card flex flex-col h-full">
-                        <div class="h-48 bg-gray-200 relative overflow-hidden">
-                            <img src="../images/drkvsrit/1.png"
-                                alt="Admissions"
-                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                            <div
-                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-blue-600 uppercase tracking-wider">
-                                Admissions
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <div class="text-sm text-gray-500 mb-2 font-medium">July 15, 2023</div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
-                                <a href="../coming-soon.html">Admissions Open for 2024-25</a>
-                            </h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                                Applications are invited for B.Tech and MBA/MCA programs for the academic year 2024-25.
-                                Apply now!
-                            </p>
-                            <a href="../coming-soon.html"
-                                class="mt-auto text-blue-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                                Read More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
+                <!-- Seminar Section -->
+                <div class="ne-seminar-block">
+                    <h3>Seminar by Storm Overseas Education Group On 01/11/2021</h3>
+                    <div class="ne-seminar-grid">
+                        <img src="../images/drkvsrit/EVENT1.png" alt="Storm Overseas Seminar - Session 1">
+                        <img src="../images/drkvsrit/FRESHMAN (3).png" alt="Storm Overseas Seminar - Session 2">
+                        <img src="../images/drkvsrit/1.png" alt="Storm Overseas Seminar - Audience">
+                        <img src="../images/drkvsrit/EVENT1.png" alt="Storm Overseas Seminar - Panel">
+                    </div>
                 </div>
 
-                <!-- Pagination (Static) -->
-                <div class="mt-12 flex justify-center gap-2">
-                    <span class="px-4 py-2 bg-pink-600 text-white rounded-lg cursor-pointer">1</span>
-                    <span
-                        class="px-4 py-2 bg-white text-gray-700 hover:bg-gray-100 rounded-lg cursor-pointer border border-gray-200">2</span>
-                    <span
-                        class="px-4 py-2 bg-white text-gray-700 hover:bg-gray-100 rounded-lg cursor-pointer border border-gray-200">3</span>
-                    <span
-                        class="px-4 py-2 bg-white text-gray-700 hover:bg-gray-100 rounded-lg cursor-pointer border border-gray-200">Next</span>
+                <hr style="border:none; border-top:2px solid #e5e7eb; margin:40px 0;">
+
+                <!-- Placement Event 1: Ramtech -->
+                <div class="ne-event-card">
+                    <div class="ne-event-card-inner">
+                        <div class="ne-event-logo">
+                            <div class="logo-placeholder" style="color:#c0392b; font-size:1.4rem; letter-spacing:3px;">RAMTECH</div>
+                        </div>
+                        <div class="ne-event-details">
+                            <h3 class="ne-event-name">Ramtech Placement Drive</h3>
+                            <div class="ne-event-meta">
+                                <span class="ne-event-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    30/04/2021
+                                </span>
+                            </div>
+                            <p class="ne-event-info">
+                                <span class="ne-students-badge">34 Students Selected</span>
+                                <span class="ne-package-badge">₹2,20,000/- p.a</span>
+                            </p>
+                            <a href="https://drkvsrit.ac.in/news-and-events/ramtech_2021.pdf" target="_blank" class="ne-event-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Selected Students List
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Placement Event 2: MovingDneedle -->
+                <div class="ne-event-card">
+                    <div class="ne-event-card-inner">
+                        <div class="ne-event-logo">
+                            <div class="logo-placeholder" style="color:#2980b9; font-size:1rem;">moving<span style="display:inline-block;background:#2980b9;color:#fff;border-radius:50%;width:28px;height:28px;text-align:center;line-height:28px;margin:0 2px;">D</span>needle</div>
+                        </div>
+                        <div class="ne-event-details">
+                            <h3 class="ne-event-name">MovingDneedle Placement Drive</h3>
+                            <div class="ne-event-meta">
+                                <span class="ne-event-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    22/04/2021
+                                </span>
+                            </div>
+                            <p class="ne-event-info">
+                                <span class="ne-students-badge">14 Students Selected</span>
+                                <span class="ne-package-badge">₹1,80,000/- p.a</span>
+                            </p>
+                            <a href="https://drkvsrit.ac.in/news-and-events/movingdneedle_2021.pdf" target="_blank" class="ne-event-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Selected Students List
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placement Event 3: Tech Mahindra -->
+                <div class="ne-event-card">
+                    <div class="ne-event-card-inner">
+                        <div class="ne-event-logo">
+                            <div class="logo-placeholder" style="color:#1a237e; font-size:1.1rem;">Tech<br><span style="font-size:1.4rem; color:#c62828;">Mahindra</span></div>
+                        </div>
+                        <div class="ne-event-details">
+                            <h3 class="ne-event-name">Tech Mahindra Placement Drive</h3>
+                            <div class="ne-event-meta">
+                                <span class="ne-event-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    07/05/2020
+                                </span>
+                            </div>
+                            <p class="ne-event-info">
+                                <span class="ne-students-badge">27 Students Selected</span>
+                                <span class="ne-package-badge">₹1,80,000/- p.a</span>
+                            </p>
+                            <a href="https://drkvsrit.ac.in/wp-content/uploads/2020/06/techmahindra.pdf" target="_blank" class="ne-event-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Selected Students List
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placement Event 4: Perfect Gears -->
+                <div class="ne-event-card">
+                    <div class="ne-event-card-inner">
+                        <div class="ne-event-logo">
+                            <div class="logo-placeholder" style="color:#1565c0; font-size:1.2rem;">Perfect<br>Gears</div>
+                        </div>
+                        <div class="ne-event-details">
+                            <h3 class="ne-event-name">Perfect Gears Placement Drive</h3>
+                            <div class="ne-event-meta">
+                                <span class="ne-event-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    02/03/2020
+                                </span>
+                            </div>
+                            <p class="ne-event-info">
+                                <span class="ne-students-badge">20 Students Selected</span>
+                                <span class="ne-package-badge">₹1,68,000/- p.a</span>
+                            </p>
+                            <a href="https://drkvsrit.ac.in/wp-content/uploads/2020/03/perfect-gears-list.pdf" target="_blank" class="ne-event-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Selected Students List
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placement Event 5: Repherrals -->
+                <div class="ne-event-card">
+                    <div class="ne-event-card-inner">
+                        <div class="ne-event-logo">
+                            <div class="logo-placeholder" style="color:#6a1b9a; font-size:1.2rem;">Repherrals</div>
+                        </div>
+                        <div class="ne-event-details">
+                            <h3 class="ne-event-name">Repherrals Placement Drive</h3>
+                            <div class="ne-event-meta">
+                                <span class="ne-event-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    31/01/2020
+                                </span>
+                            </div>
+                            <p class="ne-event-info">
+                                <span class="ne-students-badge">18 Students Selected</span>
+                                <span class="ne-package-badge">₹1,44,000/- p.a</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placement Event 6: WeCred -->
+                <div class="ne-event-card">
+                    <div class="ne-event-card-inner">
+                        <div class="ne-event-logo">
+                            <div class="logo-placeholder" style="color:#00695c; font-size:1.3rem;">WeCred</div>
+                        </div>
+                        <div class="ne-event-details">
+                            <h3 class="ne-event-name">WeCred Placement Drive</h3>
+                            <div class="ne-event-meta">
+                                <span class="ne-event-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    25/01/2020
+                                </span>
+                            </div>
+                            <p class="ne-event-info">
+                                <span class="ne-students-badge">12 Students Selected</span>
+                                <span class="ne-package-badge">₹2,05,000/- p.a</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placement Event 7: Face Academy -->
+                <div class="ne-event-card">
+                    <div class="ne-event-card-inner">
+                        <div class="ne-event-logo">
+                            <div class="logo-placeholder" style="color:#e65100; font-size:1.3rem;">FACE<br><span style="font-size:0.8rem; color:#666;">Academy</span></div>
+                        </div>
+                        <div class="ne-event-details">
+                            <h3 class="ne-event-name">Face Academy Placement Drive</h3>
+                            <div class="ne-event-meta">
+                                <span class="ne-event-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    23/01/2020
+                                </span>
+                            </div>
+                            <p class="ne-event-info">
+                                <span class="ne-students-badge">2 Students Selected</span>
+                                <span class="ne-package-badge">₹2,88,000/- p.a</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placement Event 8: Paytm -->
+                <div class="ne-event-card">
+                    <div class="ne-event-card-inner">
+                        <div class="ne-event-logo">
+                            <div class="logo-placeholder" style="color:#00296b; font-size:1.4rem; letter-spacing:2px;">Paytm</div>
+                        </div>
+                        <div class="ne-event-details">
+                            <h3 class="ne-event-name">Paytm Placement Drive</h3>
+                            <div class="ne-event-meta">
+                                <span class="ne-event-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    09/01/2020
+                                </span>
+                            </div>
+                            <p class="ne-event-info">
+                                <span class="ne-students-badge">30 Students Selected</span>
+                                <span class="ne-package-badge">₹1,80,000/- p.a</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placement Event 9: Wipro -->
+                <div class="ne-event-card">
+                    <div class="ne-event-card-inner">
+                        <div class="ne-event-logo">
+                            <div class="logo-placeholder" style="color:#4a148c; font-size:1.4rem; letter-spacing:3px;">Wipro</div>
+                        </div>
+                        <div class="ne-event-details">
+                            <h3 class="ne-event-name">Wipro Placement Drive</h3>
+                            <div class="ne-event-meta">
+                                <span class="ne-event-meta-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                    07/11/2019
+                                </span>
+                            </div>
+                            <p class="ne-event-info">
+                                <span class="ne-students-badge">14 Students Selected</span>
+                                <span class="ne-package-badge">₹2,00,000/- p.a</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>

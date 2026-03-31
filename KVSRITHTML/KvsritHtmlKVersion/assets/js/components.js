@@ -184,7 +184,7 @@ const NAVBAR_HTML = `
               <a href="placements/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">About T&P</a>
               <a href="placements/index.html#record" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Placement Record</a>
               <a href="placements/index.html#internships" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Internships</a>
-              <a href="placements/index.html#news" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">News And Events</a>
+              <a href="news-and-events/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">News And Events</a>
             </div>
           </div>
         </div>
@@ -217,7 +217,7 @@ const NAVBAR_HTML = `
 
       <!-- Action Buttons (Apply Now - Rightmost) -->
       <div class="hidden xl:flex items-center pl-4">
-        <a href="admissions.html" class="bg-accent text-white px-5 py-2.5 rounded-full text-[13px] font-bold hover:bg-accent hover:shadow-lg transition-all whitespace-nowrap">Apply Now</a>
+        <a href="admissions/index.html" class="bg-accent text-white px-5 py-2.5 rounded-full text-[13px] font-bold hover:bg-accent hover:shadow-lg transition-all whitespace-nowrap">Apply Now</a>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -237,11 +237,11 @@ const NAVBAR_HTML = `
     <div class="py-4 flex flex-col space-y-2">
       <a href="index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Home</a>
       <a href="about/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">About Us</a>
-      <a href="admissions.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Admissions</a>
+      <a href="admissions/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Admissions</a>
       <a href="departments/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Departments</a>
       <a href="placements/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Placements</a>
       <a href="student-portal/index.html" class="px-4 py-3 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg">Student Portal</a>
-      <a href="admissions.html" class="mx-4 mt-2 bg-accent text-white px-6 py-3 rounded-xl text-center font-bold">Apply Now</a>
+      <a href="admissions/index.html" class="mx-4 mt-2 bg-accent text-white px-6 py-3 rounded-xl text-center font-bold">Apply Now</a>
     </div>
   </div>
 </nav>
@@ -267,7 +267,7 @@ const FOOTER_HTML = `
       <div class="space-y-6">
         <img src="images/logo.png" alt="KVSRIT Logo" class="h-16">
         <p class="text-sm leading-relaxed text-gray-400">
-          Dr. K.V. Subba Reddy Institute of Technology (KVSRIT) is established in 2007 with a mission to produce high-quality engineering professionals.
+          Dr. K.V. Subba Reddy Institute of Technology (DRKVSRIT) is established in 2007, affiliated to JNTUA, Ananthapuramu and approved by AICTE, New Delhi. Accredited by NAAC with A+ Grade.
         </p>
         <div class="flex space-x-4">
           <a href="coming-soon.html" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
@@ -282,7 +282,7 @@ const FOOTER_HTML = `
         <h4 class="text-white font-bold text-lg mb-8 relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-12 after:h-1 after:bg-blue-600">Quick Links</h4>
         <ul class="space-y-4 text-sm">
           <li><a href="about/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> About Us</a></li>
-          <li><a href="admissions.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Admissions</a></li>
+          <li><a href="admissions/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Admissions</a></li>
           <li><a href="academics/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Academics</a></li>
           <li><a href="placements/index.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Placements</a></li>
           <li><a href="contact.html" class="hover:text-blue-500 transition-colors flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-accent"><path d="m9 18 6-6-6-6"/></svg> Contact Us</a></li>
@@ -371,12 +371,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const isProgramsOffered = /\/programs-offered\//.test(normalizedPath);
       const isFeeStructure = /\/fee-structure\//.test(normalizedPath);
       const isScholarships = /\/scholarships\//.test(normalizedPath);
+      const isAdmissions = /\/admissions\//.test(normalizedPath);
 
       // Multi-level nesting check (e.g. departments/cse/index.html)
       const deptMatch = normalizedPath.match(/\/departments\/([^\/]+)\//);
       if (deptMatch) return '../../';
 
-      if (isDept || isAbout || isAcademics || isCampus || isPlacements || isStudentPortal || isCourses || isVisionMission || isAffiliation || isAdministration || isAcademicCouncil || isAdmissionsProcedure || isCriteriaForAdmission || isProgramsOffered || isFeeStructure || isScholarships) {
+      if (isDept || isAbout || isAcademics || isCampus || isPlacements || isStudentPortal || isCourses || isVisionMission || isAffiliation || isAdministration || isAcademicCouncil || isAdmissionsProcedure || isCriteriaForAdmission || isProgramsOffered || isFeeStructure || isScholarships || isAdmissions) {
         return '../';
       }
       return './';
@@ -571,7 +572,24 @@ function highlightActive(container, rootPath) {
     const href = a.getAttribute('href');
     if (!href) return;
     const target = href.replace(rootPath, '').toLowerCase();
-    if (current === target || (current === 'index.html' && (target === '' || target.endsWith('index.html')))) {
+    
+    // Check for exact match or home highlights
+    const isHome = current === 'index.html' || current === '';
+    const isTargetHome = target === 'index.html' || target === '';
+    
+    // Check if we are in the admissions section
+    const isAdmissionsPage = window.location.pathname.includes('/admissions') || 
+                             window.location.pathname.includes('/admissions-procedure') ||
+                             window.location.pathname.includes('/criteria-for-admission') ||
+                             window.location.pathname.includes('/programs-offered') ||
+                             window.location.pathname.includes('/fee-structure') ||
+                             window.location.pathname.includes('/scholarships');
+    
+    if (isHome && isTargetHome) {
+      a.classList.add('text-blue-600');
+    } else if (isAdmissionsPage && (target === 'admissions/index.html' || a.textContent.trim() === 'Admissions')) {
+       a.classList.add('text-blue-600');
+    } else if (current === target || (target !== 'index.html' && target !== '' && window.location.pathname.toLowerCase().includes(target.replace('index.html', '')))) {
       a.classList.add('text-blue-600');
     }
   });

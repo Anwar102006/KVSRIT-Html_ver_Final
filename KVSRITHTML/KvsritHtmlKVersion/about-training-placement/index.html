@@ -25,6 +25,203 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
+
+        /* T&P Page Specific Styles */
+        .tp-about-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .tp-about-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .tp-about-section h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 16px;
+        }
+
+        .tp-about-section p {
+            font-size: 1rem;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .tp-about-section h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-top: 30px;
+            margin-bottom: 14px;
+        }
+
+        .tp-about-section ol {
+            padding-left: 24px;
+            margin-bottom: 24px;
+        }
+
+        .tp-about-section ol li {
+            font-size: 1rem;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        /* Members Table */
+        .tp-members-section {
+            padding: 60px 0;
+            background: #f8fafc;
+        }
+
+        .tp-members-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .tp-members-section h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .members-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .members-table thead {
+            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+            color: #fff;
+        }
+
+        .members-table th {
+            padding: 14px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .members-table td {
+            padding: 14px 20px;
+            font-size: 0.95rem;
+            color: #374151;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .members-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .members-table tbody tr:hover {
+            background: #eff6ff;
+        }
+
+        .members-table tbody tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        .members-table tbody tr:nth-child(even):hover {
+            background: #eff6ff;
+        }
+
+        /* Activity Cycle Section */
+        .tp-cycle-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .tp-cycle-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .tp-cycle-section h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+        }
+
+        .cycle-image {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 12px;
+        }
+
+        .cycle-stages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .cycle-stage {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: #fff;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cycle-stage:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(30, 58, 138, 0.4);
+        }
+
+        .cycle-stage .stage-num {
+            background: rgba(255, 255, 255, 0.25);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .members-table th,
+            .members-table td {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+
+            .cycle-stages {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tp-about-section h2,
+            .tp-members-section h2,
+            .tp-cycle-section h2 {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
 
@@ -49,110 +246,123 @@
             </div>
         </div>
 
-        <!-- Vision & Mission -->
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-12">
-                    <!-- Vision -->
-                    <div class="bg-blue-50 p-8 rounded-2xl border border-blue-100">
-                        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="2" y1="12" x2="22" y2="12" />
-                                <path
-                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                            </svg>
-                        </div>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
-                        <p class="text-gray-600 leading-relaxed">
-                            To effectivley promote the students to meet the industry expectations and to create a
-                            platform where they can showcase their skills and talent. To be a center of excellence in
-                            training and placement by imparting technical and soft skills to the students.
-                        </p>
-                    </div>
+        <!-- About Training & Placement Cell -->
+        <section class="tp-about-section">
+            <div class="container">
+                <h2>Training and Placement Cell:</h2>
+                <p>
+                    The Training and Placement Cell plays a crucial role in locating job opportunities for Under
+                    Graduates and Post Graduates passing out from the college by keeping in touch with reputed firms and
+                    industrial establishments. The Placement Cell operates round the year to facilitate contacts between
+                    companies and graduates. The goal of Training & Placement Cell is to provide students with a platform
+                    for using their potential to gain valuable experience by working in industry, it also acts as the
+                    interface between various companies seeking talented young graduates and post graduates in various
+                    disciplines. The Committee meets twice in academic year.
+                </p>
 
-                    <!-- Mission -->
-                    <div class="bg-emerald-50 p-8 rounded-2xl border border-emerald-100">
-                        <div
-                            class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center text-white mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                                <polyline points="22 4 12 14.01 9 11.01" />
-                            </svg>
-                        </div>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
-                        <p class="text-gray-600 leading-relaxed">
-                            To achieve 100% placement for eligible students. To guide students in choosing the right
-                            career path. To provide opportunities for holistic development of students. To facilitate
-                            industry-institute interaction.
-                        </p>
-                    </div>
-                </div>
+                <h3>The Prime objectives of the Training Cell are</h3>
+                <ol>
+                    <li>To ensure maximum placements of the outgoing students.</li>
+                    <li>To recognize the core competencies of the students.</li>
+                    <li>To train the students to meet the expectations of the industry through our Career Development
+                        Programs.</li>
+                    <li>To build confidence in students and develop right attitude in them and</li>
+                    <li>To enhance their communication skills.</li>
+                </ol>
+
+                <h3>The Primary functions of the Committee are as follows</h3>
+                <ol>
+                    <li>To establish and maintain contacts with Alumni.</li>
+                    <li>To organize the various processes like written test, group discussion, technical interviews, H R
+                        interviews during the time of campus placement.</li>
+                    <li>To organize the various activities aimed at improving Institute – Industry – Interaction.</li>
+                    <li>To coordinate the soft skills training programs of the respective departments.</li>
+                    <li>To continuously monitor students' performance in aptitude and technical skills.</li>
+                </ol>
             </div>
         </section>
 
-        <!-- Objectives -->
-        <section class="py-16 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900">Core Objectives</h2>
-                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
-                        Our strategic goals to ensure student success in the professional world.
-                    </p>
-                </div>
+        <!-- Members Table -->
+        <section class="tp-members-section">
+            <div class="container">
+                <h2>Members of the Training and Placement Cell</h2>
+                <table class="members-table">
+                    <thead>
+                        <tr>
+                            <th>S. No</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ms. M. Jhansi Rani</td>
+                            <td>Asst. Professor, MBA</td>
+                            <td>Convener</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mr. B. K. Vishwanath</td>
+                            <td>Asst. Professor, CE</td>
+                            <td>Member</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mr. A. Solmon</td>
+                            <td>Asst. Professor, ME</td>
+                            <td>Member</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mr. K. Mahesh</td>
+                            <td>Asst. Professor, ECE</td>
+                            <td>Member</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Mr. R. Shashidhar</td>
+                            <td>Asst. Professor, EEE</td>
+                            <td>Member</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Mr. B. Harish Kumar Reddy</td>
+                            <td>Asst. Professor, CSE</td>
+                            <td>Member</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div
-                            class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-4 font-bold">
-                            1</div>
-                        <h3 class="text-xl font-bold mb-2">Skill Development</h3>
-                        <p class="text-gray-600 text-sm">Organizing training programs to improve soft skills, technical
-                            skills, and aptitude.</p>
+        <!-- Training & Placements Activity Cycle -->
+        <section class="tp-cycle-section">
+            <div class="container">
+                <h2>Training & Placements Activity Cycle</h2>
+                <img src="../images/drkvsrit_pages/about-training-placement/cycle.jpg"
+                    alt="Training and Placements Activity Cycle" class="cycle-image">
+                <div class="cycle-stages">
+                    <div class="cycle-stage">
+                        <span class="stage-num">1</span>
+                        Pre Assessments
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div
-                            class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-4 font-bold">
-                            2</div>
-                        <h3 class="text-xl font-bold mb-2">Industry Readiness</h3>
-                        <p class="text-gray-600 text-sm">Bridging the gap between industry and academia through
-                            internships and industrial visits.</p>
+                    <div class="cycle-stage">
+                        <span class="stage-num">2</span>
+                        Motivational Workshops
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div
-                            class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-4 font-bold">
-                            3</div>
-                        <h3 class="text-xl font-bold mb-2">Campus Drives</h3>
-                        <p class="text-gray-600 text-sm">Inviting reputed companies for campus recruitment and
-                            facilitating the selection process.</p>
+                    <div class="cycle-stage">
+                        <span class="stage-num">3</span>
+                        Training Activities
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div
-                            class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-4 font-bold">
-                            4</div>
-                        <h3 class="text-xl font-bold mb-2">Career Guidance</h3>
-                        <p class="text-gray-600 text-sm">Providing counseling and guidance to students regarding career
-                            opportunities.</p>
+                    <div class="cycle-stage">
+                        <span class="stage-num">4</span>
+                        Placement Activities
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div
-                            class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-4 font-bold">
-                            5</div>
-                        <h3 class="text-xl font-bold mb-2">Alumni Interaction</h3>
-                        <p class="text-gray-600 text-sm">Facilitating interaction with alumni to understand industry
-                            trends and expectations.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div
-                            class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-4 font-bold">
-                            6</div>
-                        <h3 class="text-xl font-bold mb-2">Entrepreneurship</h3>
-                        <p class="text-gray-600 text-sm">Encouraging students to take up entrepreneurship and providing
-                            necessary support.</p>
+                    <div class="cycle-stage">
+                        <span class="stage-num">5</span>
+                        Feedback & Internal Analysis
                     </div>
                 </div>
             </div>
